@@ -1,0 +1,534 @@
+type: ItemTurret
+name: Omen
+description: 
+health: 2500
+size: 4
+targetGround: true
+targetAir: true
+reload: 600
+range: 480
+rotateSpeed: 2.6
+recoil: 2
+cooldownTime: 150
+researchCostMultiplier: 0.2
+liquidCapacity: 20
+hasLiquid: true
+hasItem: true
+shootSound: laser
+consumes: {
+    power: 20
+    coolant: {
+    amount: 1
+    optional: true
+    }
+}
+shootY: 0
+maxAmmo: 30
+ammoPerShot: 5
+moveWhileCharging: true
+chargeSound: plasmadrop
+shake: 2
+ammoTypes: {
+        nanometal: {
+        type:artilleryBulletType
+        damage: 120
+        splashDamage: 120
+        splashDamageRadius: 60
+        status: oe-nanometal-corrupt
+        statusDuration: 300
+        speed: 30
+        width: 10
+        height: 10
+        sprite: large-bomb
+        spin: 20
+        shrinkY: -2
+        shrinkX: -2
+        collidesAir: true
+        frontColor: FFFFFF
+        backColor: C269FF
+        trailColor: C269FF
+        trailWidth: 8
+        trailLength: 20
+        trailChance: 100
+        trailEffect: {
+        type: MultiEffect
+        effects: [
+        {
+        type: ParticleEffect
+        particles: 3
+        sizeFrom: 4
+        sizeTo: 0
+        line: false
+        lifetime: 180
+        length: 10
+        baseLength: 5
+        colorTo: FFFFFF00
+        colorFrom: C269FF
+        interp: pow10Out
+        }
+        {
+        type: ParticleEffect
+        particles: 3
+        sizeFrom: 5
+        sizeTo: 0
+        line: false
+        lifetime: 190
+        length: 10
+        baseLength: 5
+        colorTo: FFFFFF00
+        colorFrom: C269FF
+        interp: pow10Out
+        }
+        {
+        type: ParticleEffect
+        particles: 3
+        sizeFrom: 6
+        sizeTo: 0
+        line: false
+        lifetime: 200
+        length: 5
+        baseLength: 5
+        colorTo: FFFFFF00
+        colorFrom: C269FF
+        interp: pow10Out
+        }
+        ]
+        }
+        lifetime: 60
+        despawnHit: true
+        despawnEffect: none
+        hitSound: plasmaboom
+        hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+        type: ParticleEffect
+        particles: 9
+        sizeFrom: 1.5
+        sizeTo: 0
+        line: true
+        lifetime: 10
+        length: 9
+        baseLength: 4
+        colorTo: FFFFFF
+        colorFrom: C269FF
+        }
+        {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 5
+        lifetime: 5
+        strokeFrom: 1.5
+        strokeTo: 0
+        colorTo: FFFFFF
+        colorFrom: C269FF
+        }
+        ]
+        }
+        shootEffect:{
+        type: WaveEffect
+        followParent: false
+        sizeFrom: 0
+        sizeTo: 20
+        lifetime: 60
+        strokeFrom: 3
+        strokeTo: 0
+        colorTo: FFFFFF
+        colorFrom: C269FF
+        }
+        fragBullets: 6
+        fragAngle: 0
+        fragVelocityMax: 1
+        fragVelocityMin: 1
+        fragSpread: 60
+        fragRandomSpread: 0
+        fragBullet: {
+            type: BombBulletType
+            damage: 60
+            splashDamage: 60
+            splashDamageRadius: 30
+            status: oe-nanometal-corrupt
+            statusDuration: 300
+            speed: 3
+            drag: 0.1
+            width: 10
+            height: 10
+            shrinkY: -0.2
+            shrinkX: -0.2
+            sprite: oe-circle-ball
+            collidesAir: false
+            collides: false
+            hittable: false
+            hitSound: laser
+            frontColor: FFFFFF
+            backColor: C269FF
+            trailColor: C269FF
+            trailWidth: 2
+            trailLength: 10
+            lifetime: 30
+            despawnHit: true
+            despawnEffect: none
+            hitEffect: {
+            type: MultiEffect
+            effects: [
+            {
+            type: ParticleEffect
+            particles: 9
+            sizeFrom: 1.5
+            sizeTo: 0
+            line: true
+            lifetime: 10
+            length: 9
+            baseLength: 4
+            colorTo: FFFFFF
+            colorFrom: C269FF
+            }
+            {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 5
+            lifetime: 5
+            strokeFrom: 1.5
+            strokeTo: 0
+            colorTo: FFFFFF
+            colorFrom: C269FF
+            }
+            ]
+            }
+            fragVelocityMax: 1
+            fragVelocityMin: 1
+            fragBullets: 2
+            fragAngle: 0
+            fragSpread: 90
+            fragRandomSpread: 0
+            fragBullet: {
+            type: BombBulletType
+            damage: 20
+            splashDamage: 20
+            splashDamageRadius: 30
+            status: oe-nanometal-corrupt
+            statusDuration: 300
+            speed: 7
+            drag: 0.1
+            width: 10
+            height: 10
+            shrinkY: -2
+            shrinkX: 0.5
+            collidesAir: false
+            collides: false
+            hittable: false
+            hitSound: laser
+            frontColor: FFFFFF
+            backColor: C269FF
+            trailColor: C269FF
+            trailWidth: 2
+            trailLength: 10
+            lifetime: 30
+            despawnHit: true
+            despawnEffect: none
+            hitEffect: {
+            type: MultiEffect
+            effects: [
+            {
+            type: ParticleEffect
+            particles: 9
+            sizeFrom: 1.5
+            sizeTo: 0
+            line: true
+            lifetime: 10
+            length: 9
+            baseLength: 4
+            colorTo: FFFFFF
+            colorFrom: C269FF
+            }
+            {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 5
+            lifetime: 5
+            strokeFrom: 1.5
+            strokeTo: 0
+            colorTo: FFFFFF
+            colorFrom: C269FF
+            }
+            ]
+            }
+            fragBullets: 1
+            fragAngle: 180
+            fragSpread: 0
+            fragRandomSpread: 0
+            fragBullet: {
+            type: LaserBulletType
+            damage: 75
+            length: 100
+            width: 15
+            sideLength: 10
+            sideWidth: 2
+            recoil: 0.1
+            colors: ["C269FF","FFFFFF"]
+            status: oe-nanometal-corrupt
+            statusDuration: 300
+            lifetime: 40
+            pierce: true
+            buildingDamageMultiplier: 0.05
+            }
+        }
+        }
+    }
+    phase-fabric: {
+        type:artilleryBulletType
+        damage: 60
+        splashDamage: 60
+        splashDamageRadius: 60
+        speed: 30
+        width: 10
+        height: 10
+        sprite: large-bomb
+        spin: 20
+        shrinkY: -2
+        shrinkX: -2
+        collidesAir: true
+        frontColor: FFFFFF
+        backColor: FFC37A
+        trailColor: FFC37A
+        trailWidth: 8
+        trailLength: 20
+        trailChance: 100
+        trailEffect: {
+        type: MultiEffect
+        effects: [
+        {
+        type: ParticleEffect
+        particles: 3
+        sizeFrom: 4
+        sizeTo: 0
+        line: false
+        lifetime: 180
+        length: 2
+        baseLength: 2
+        colorTo: FFFFFF00
+        colorFrom: FFC37A
+        interp: pow10Out
+        }
+        {
+        type: ParticleEffect
+        particles: 3
+        sizeFrom: 5
+        sizeTo: 0
+        line: false
+        lifetime: 190
+        length: 2
+        baseLength: 2
+        colorTo: FFFFFF00
+        colorFrom: FFC37A
+        interp: pow10Out
+        }
+        {
+        type: ParticleEffect
+        particles: 3
+        sizeFrom: 6
+        sizeTo: 0
+        line: false
+        lifetime: 200
+        length: 2
+        baseLength: 2
+        colorTo: FFFFFF00
+        colorFrom: FFC37A
+        interp: pow10Out
+        }
+        ]
+        }
+        lifetime: 60
+        despawnHit: true
+        despawnEffect: none
+        hitSound: plasmaboom
+        hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+        type: ParticleEffect
+        particles: 9
+        sizeFrom: 1.5
+        sizeTo: 0
+        line: true
+        lifetime: 10
+        length: 9
+        baseLength: 4
+        colorTo: FFFFFF
+        colorFrom: FFC37A
+        }
+        {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 5
+        lifetime: 5
+        strokeFrom: 1.5
+        strokeTo: 0
+        colorTo: FFFFFF
+        colorFrom: FFC37A
+        }
+        ]
+        }
+        shootEffect:{
+        type: WaveEffect
+        followParent: false
+        sizeFrom: 0
+        sizeTo: 20
+        lifetime: 60
+        strokeFrom: 3
+        strokeTo: 0
+        colorTo: FFFFFF
+        colorFrom: FFC37A
+        }
+        fragBullets: 10
+        fragAngle: 0
+        fragVelocityMax: 1
+        fragVelocityMin: 1
+        fragSpread: 36
+        fragRandomSpread: 0
+        fragBullet: {
+            type: BombBulletType
+            damage: 60
+            splashDamage: 60
+            splashDamageRadius: 30
+            speed: 3
+            drag: 0.1
+            width: 10
+            height: 10
+            shrinkY: -0.2
+            shrinkX: -0.2
+            sprite: oe-circle-ball
+            collidesAir: false
+            collides: false
+            hittable: false
+            hitSound: laser
+            frontColor: FFFFFF
+            backColor: FFC37A
+            trailColor: FFC37A
+            trailWidth: 2
+            trailLength: 10
+            lifetime: 30
+            despawnHit: true
+            despawnEffect: none
+            hitEffect: {
+            type: MultiEffect
+            effects: [
+            {
+            type: ParticleEffect
+            particles: 9
+            sizeFrom: 1.5
+            sizeTo: 0
+            line: true
+            lifetime: 10
+            length: 9
+            baseLength: 4
+            colorTo: FFFFFF
+            colorFrom: FFC37A
+            }
+            {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 5
+            lifetime: 5
+            strokeFrom: 1.5
+            strokeTo: 0
+            colorTo: FFFFFF
+            colorFrom: FFC37A
+            }
+            ]
+            }
+            fragVelocityMax: 1
+            fragVelocityMin: 1
+            fragBullets: 1
+            fragAngle: 0
+            fragSpread: 0
+            fragRandomSpread: 0
+            fragBullet: {
+            type: BombBulletType
+            damage: 20
+            splashDamage: 20
+            splashDamageRadius: 30
+            speed: 7
+            drag: 0.1
+            width: 10
+            height: 10
+            shrinkY: -2
+            shrinkX: 0.5
+            collidesAir: false
+            collides: false
+            hittable: false
+            hitSound: laser
+            frontColor: FFFFFF
+            backColor: FFC37A
+            trailColor: FFC37A
+            trailWidth: 2
+            trailLength: 10
+            lifetime: 30
+            despawnHit: true
+            despawnEffect: none
+            hitEffect: {
+            type: MultiEffect
+            effects: [
+            {
+            type: ParticleEffect
+            particles: 9
+            sizeFrom: 1.5
+            sizeTo: 0
+            line: true
+            lifetime: 10
+            length: 9
+            baseLength: 4
+            colorTo: FFFFFF
+            colorFrom: FFC37A
+            }
+            {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 5
+            lifetime: 5
+            strokeFrom: 1.5
+            strokeTo: 0
+            colorTo: FFFFFF
+            colorFrom: FFC37A
+            }
+            ]
+            }
+            fragBullets: 3
+            fragAngle: 180
+            fragSpread: 45
+            fragRandomSpread: 0
+            fragBullet: {
+            type: LaserBulletType
+            damage: 30
+            length: 100
+            width: 10
+            sideLength: 10
+            sideWidth: 2
+            recoil: 0.1
+            colors: ["FFC37A","FFFFFF"]
+            status: electrified
+            statusDuration: 100
+            lifetime: 40
+            pierce: true
+            buildingDamageMultiplier: 0.05
+            }
+        }
+        }
+    }
+}
+shoot: {
+    shots: 1
+    firstShotDelay: 80
+}
+
+requirements: [
+surge-alloy/750
+silicon/500
+stranth/1200
+plastanium/800
+thorium/1200
+lead/1200
+nanometal/500
+]
+category: turret
+research: foreshadow
