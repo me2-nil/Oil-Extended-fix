@@ -45,7 +45,7 @@ weapons:[
         damage: 0
         splashDamage: 30
         splashDamageRadius: 50
-        healPercent: 0.05
+        healPercent: 0.1
         drawSize: 10
         frontColor: FFFFFF
         backColor: 98FFA9
