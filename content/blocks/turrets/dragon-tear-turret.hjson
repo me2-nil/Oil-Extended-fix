@@ -67,7 +67,7 @@ smokeEffect: {
 
 ammoTypes: {
         pyratite: {
-        type: BasicBulletType
+        type: ArtilleryBulletType
         damage: 50
         speed: 10
         width: 10
