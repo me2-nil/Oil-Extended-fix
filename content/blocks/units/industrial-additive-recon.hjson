@@ -10,6 +10,11 @@ consumes: {
     stranth/50
     silicon/30
     ]
+    liquids:{
+        liquids:[
+        diesel/0.3
+        ]
+    }
     }
 upgrades:[
     ["warrior","sparta"]
