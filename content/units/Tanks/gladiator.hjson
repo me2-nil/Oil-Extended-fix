@@ -1,7 +1,7 @@
 
 type: tank
 name: Gladiator
-description: IT JUST A TANK BOI
+description: Burn everything that stands in your way. Can shoot bullets to destroy buildings
 hitSize: 36
 singleTarget: false
 omniMovement: false
