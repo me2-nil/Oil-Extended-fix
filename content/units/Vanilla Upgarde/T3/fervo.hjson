@@ -1,0 +1,237 @@
+name: Fervo
+description: flying explosive shotgundeal area damage.
+flying: true
+type: flying
+lowAltitude: true,
+hitSize: 16
+health: 650
+armor: 7
+itemCapacity: 20
+speed: 1.3
+rotateSpeed: 3
+rotateShooting: true
+singleTarget: false
+circleTarget: false
+faceTarget: true
+accel: 0.1
+drag: 0.05
+itemOffsetY: 5
+engineSize: 3
+engineOffset: 7
+controller: FlyingAI
+weapons:[
+    {
+    name: fervo-main-weapon
+    x: 0
+    y: 6
+    shootSound: artillery
+    reload: 240
+    recoil: 3
+    recoilTime: 100
+    cooldownTine: 120
+    rotate: false
+    rotateSpeed: 0
+    mirror: false
+    inaccuracy: 15
+    layer: -0.5
+    top: false
+    shootY: 2
+    shoot: {
+    shots: 5
+    }
+    bullet: {
+        type:BasicBulletType
+        lifetime: 27
+        speed: 6
+        damage: 0
+        splashDamage: 20
+        splashDamageRadius: 50
+        drawSize: 7
+        collidesAir: true
+        frontColor: FFFFFF
+        backColor: FF7600
+        maxRange: 600
+        rangeOverride: 120
+        recoil: 0.5
+        width: 10
+        height: 10
+        bulletShrink: 0
+        status: blasted
+        statusDuration: 300
+        trailEffect: none
+        trailColor: FFBA7E
+        trailWidth: 2
+        trailLength: 10
+        hitSound: explosion
+        despawnEffect: none
+        despawnHit: true
+        hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+        type: ParticleEffect
+        particles: 20
+        sizeFrom: 2
+        sizeTo: 4
+        lifetime: 75
+        length: 30
+        baseLength: 10
+        colorTo: FFFFFF00
+        colorFrom: FFFFFF30
+        sizeInterp: pow10Out
+        }
+        {
+        type: ParticleEffect
+        particles: 10
+        sizeFrom: 1.5
+        sizeTo: 0
+        line: true
+        lifetime: 15
+        length: 40
+        baseLength: 4
+        colorTo: FFFFFF
+        colorFrom: FF7600
+        }
+        {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 30
+        lifetime: 8
+        strokeFrom: 5
+        strokeTo: 0
+        lenFrom: 0
+        lenTo: 10
+        colorTo: FFFFFF
+        colorFrom: FF7600
+        }
+        ]
+    }
+    shootEffect: {
+    type: MultiEffect
+        effects: [
+         {
+        type: ParticleEffect
+        followParent: false
+        cone: 360
+        particles: 10
+        sizeFrom: 4
+        sizeTo: 0
+        lifetime: 60
+        length: 10
+        baseLength: 10
+        colorTo: FFFFFF00
+        colorFrom: FFFFFF30
+        sizeInterp: pow10In
+        layer: 120.1
+        }
+    ]
+    }
+    smokeEffect: {
+        type: ParticleEffect
+        followParent: false
+        cone: 18
+        particles: 20
+        sizeFrom: 4
+        sizeTo: 0
+        lifetime: 60
+        length: 50
+        baseLength: 10
+        colorTo: FFFFFF30
+        colorFrom: FFFFFF30
+        sizeInterp: pow10In
+        layer: 120.1
+        }
+}
+}
+{
+    name:fervo-weapon
+    x:8
+    y:-3
+    shootSound: shoot
+    reload: 40
+    recoil: 2
+    recoilTime: 5
+    rotate: true
+    rotateSpeed: 2
+    mirror: true
+    alternate: true
+    top: true
+    inaccuracy: 2
+    layer: 0.1
+    shootY: 4.5
+    shoot: {
+    shots: 3
+    shotDelay: 5
+    }
+    bullet: {
+        type: BasicBulletType
+        damage: 13
+        speed: 8
+        width: 9
+        height: 5
+        bulletShrink: 0.5
+        layer: 109
+        collidesAir: true
+        frontColor: FFFFFF
+        backColor: FFDE9B
+        lifetime: 20
+        pierce: false
+        despawnHit: true
+        despawnEffect: none
+        hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+        type: ParticleEffect
+        particles: 9
+        sizeFrom: 1.5
+        sizeTo: 0
+        line: true
+        lifetime: 10
+        length: 18
+        baseLength: 4
+        colorTo: FFFFFF
+        colorFrom: FFDE9B
+        }
+        {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 5
+        lifetime: 5
+        strokeFrom: 0
+        strokeTo: 3
+        colorTo: FFFFFF
+        colorFrom: FFDE9B
+        }
+        ]
+    }
+    shootEffect: {
+        type: ParticleEffect
+        particles: 6
+        lifetime: 10
+        length: 15
+        cone: 2
+        sizeFrom: 3
+        sizeTo: 0
+        colorTo: FFFFFF
+        colorFrom: FFDE9B
+        }
+    smokeEffect: {
+        type: MultiEffect
+            effects: [
+            {
+            type: ParticleEffect
+            particles: 6
+            lifetime: 15
+            length: 10
+            cone: 5
+            colorTo: FFC677
+            colorFrom: FFC677
+            sizeFrom: 2
+            sizeTo: 0
+            }
+            ]
+        }
+    }
+}
+]

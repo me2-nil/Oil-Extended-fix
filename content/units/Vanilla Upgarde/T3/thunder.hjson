@@ -1,0 +1,176 @@
+name: Thunder
+description: Plasma bomber. Drop net bomb to the ground do damage 3 time
+flying: true
+type: flying
+hitSize: 15
+health: 550
+armor: 5
+itemCapacity: 20
+speed: 1.8
+rotateSpeed: 2
+alwaysShootWhenMoving: true
+circleTarget: true
+faceTarget: false
+targetAir: false
+accel: 0.075
+drag: 0.1
+itemOffsetY: 5
+engineSize: 4
+engineOffset: 9
+
+controller: FlyingAI
+targetFlags: ["turret","unitAssembler", "reactor", "generator", "battery", "factory", "drill", "core"]
+
+weapons:[
+    {
+    name:thunder-bomb
+    x:0
+    y:0
+    shootSound: plasmadrop
+    reload: 180
+    rotate: true
+    mirror: false
+    alternate: false
+    layerOffset:-0.001
+    shootCone: 360
+    inaccuracy: 0
+    shootY: 3
+    shoot: {
+    shots: 1
+    }
+    bullet: {
+        type: BombBulletType
+        damage: 60
+        splashDamage: 60
+        splashDamageRadius: 60
+        rangeOverride: 5
+        speed: 0
+        width: 10
+        height: 10
+        sprite: large-bomb
+        spin: 20
+        shrinkY: -0.5
+        shrinkX: -0.5
+        collidesAir: false
+        collides: false
+        hittable: false
+        frontColor: FFFFFF
+        backColor: 98FFA9
+        lifetime: 60
+        despawnHit: true
+        despawnEffect: none
+        hitSound: plasmaboom
+        hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+        type: ParticleEffect
+        particles: 9
+        sizeFrom: 1.5
+        sizeTo: 0
+        line: true
+        lifetime: 10
+        length: 9
+        baseLength: 4
+        colorTo: FFFFFF
+        colorFrom: 98FFA9
+        }
+        {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 5
+        lifetime: 5
+        strokeFrom: 1.5
+        strokeTo: 0
+        colorTo: FFFFFF
+        colorFrom: 98FFA9
+        }
+        ]
+    }
+        shootEffect:{
+        type: WaveEffect
+        followParent: false
+        sizeFrom: 0
+        sizeTo: 20
+        lifetime: 60
+        strokeFrom: 3
+        strokeTo: 0
+        colorTo: FFFFFF
+        colorFrom: 98FFA9
+        }
+        fragBullets: 6
+        fragAngle: 0
+        fragVelocityMax: 1
+        fragVelocityMin: 1
+        fragSpread: 60
+        fragRandomSpread: 0
+        fragBullet: {
+            type: BombBulletType
+            damage: 10
+            splashDamage: 10
+            splashDamageRadius: 30
+            speed: 5
+            drag: 0.1
+            width: 10
+            height: 10
+            shrinkY: -1
+            shrinkX: 0.5
+            collidesAir: false
+            collides: false
+            hittable: false
+            hitSound: shotgun
+            frontColor: FFFFFF
+            backColor: 98FFA9
+            lifetime: 60
+            despawnHit: true
+            despawnEffect: none
+            hitEffect: {
+            type: MultiEffect
+            effects: [
+            {
+            type: ParticleEffect
+            particles: 9
+            sizeFrom: 1.5
+            sizeTo: 0
+            line: true
+            lifetime: 10
+            length: 9
+            baseLength: 4
+            colorTo: FFFFFF
+            colorFrom: 98FFA9
+            }
+            {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 5
+            lifetime: 5
+            strokeFrom: 1.5
+            strokeTo: 0
+            colorTo: FFFFFF
+            colorFrom: 98FFA9
+            }
+            ]
+            }
+            fragBullets: 3
+            fragAngle: 180
+            fragSpread: 20
+            fragRandomSpread: 0
+            fragBullet: {
+            type: LaserBulletType
+            damage: 10
+            length: 60
+            width: 4
+            sideLength: 10
+            sideWidth: 2
+            recoil: 0.1
+            colors: ["98FFA9","FFFFFF"]
+            status: electrified
+            statusDuration: 100
+            lifetime: 20
+            pierce: true
+            healPercent: 10
+            }
+        }
+    }
+    }
+]

@@ -1,0 +1,70 @@
+name: Golem
+description: Close range heavy attack. Can destroy any building easily. Fast Self Reapir
+type: legs
+hitSize: 15
+health: 990
+armor: 14
+itemCapacity: 0
+speed: 0.6
+hovering: true
+faceTarget: true
+targetGround: true
+targetAir: false
+rotateSpeed: 1.8
+rotateShooting: false
+groundLayer: 75.2
+legLength: 25
+legCount: 3
+legGroupSize: 1
+accel: 0.1
+drag: 0.1
+shadowElevationScl: 0.7
+healColor: FFDB7C
+abilities: [
+    {
+    type: RegenAbility
+    percentAmount: 0.03334
+    }
+]
+weapons:[
+{
+    name:golem-weapon
+    x:8.5
+    y:1.5
+    shootSound: laser
+    heatColor: FFDB7C
+    reload: 30
+    recoil: 2
+    recoilTime: 15
+    rotate: false
+    mirror: true
+    alternate: true
+    top: false
+    ignoreRotation: true
+    shoot: {
+    type: shootBarrel
+    shots: 5
+    barrels: [
+    0,5,0
+    0,5,-5
+    0,5,-2.5
+    0,5,5
+    0,5,2.5
+    ]
+    }
+    bullet: {
+        type: LaserBulletType
+        damage: 32
+        length: 50
+        width: 8
+        sideLength: 0
+        sideWidth: 0
+        rangeOverride: 60
+        recoil: 0.1
+        colors: ["FFDB7C","FFFFFF"]
+        lifetime: 16
+        pierce: true
+        buildingDamageMultipiler: 3
+        }
+}
+]

@@ -1,0 +1,300 @@
+name: Vitalis
+description: Create a shield to block bullets in any direction. Can be used to repair nearby teammates.
+type: mech
+hitSize: 15
+health: 700
+armor: 6
+itemCapacity: 0
+speed: 0.45
+singleTarget: false
+targetGround: true
+targetAir: true
+omniMovement: true
+rotateSpeed: 3
+rotateShooting: false
+accel: 0.2
+drag: 0.1
+shadowElevationScl: 0.7
+buildSpeed: 0.9
+canBoost: true
+boostMultiplier: 1.8
+abilities: [
+    {
+    type: ShieldArcAbility
+    max: 800
+    y: -180
+    x: 0
+    radius: 200
+    angle: 20
+    width: 10
+    regen: 0.3334
+    cooldown: 300
+    whenShooting: true
+    }
+    {
+    type: RepairFieldAbility
+    amount: 5
+    reload: 120
+    range: 60
+    }
+]
+weapons:[
+{
+    name:vitalis-main-weapon
+    x:8.5
+    y:1.5
+    shootSound: laser
+    heatColor: 98FFA9
+    reload: 78
+    recoil: 2
+    recoilTime: 15
+    rotate: true
+    rotateSpeed: 1
+    rotationLimit: 20
+    mirror: true
+    alternate: true
+    top: false
+    shoot: {
+    type: shootBarrel
+    shots: 3
+    barrels: [
+    0,5,0
+    0,5,-10
+    0,5,10
+    ]
+    }
+    bullet: {
+        type:BasicBulletType
+        lifetime: 80
+        speed: 6
+        drag: 0.1
+        damage: 20
+        splashDamage: 30
+        splashDamageRadius: 20
+        healPercent: 10
+        sprite: large-bomb
+        spin: 10
+        drawSize: 15
+        rangeOverride: 150
+        frontColor: FFFFFF
+        backColor: 98FFA9
+        width: 10
+        height: 10
+        status: electrified
+        statusDuration: 300
+        trailEffect: none
+        trailColor: 98FFA9
+        trailWidth: 2
+        trailLength: 10
+        homingRange: 200
+        homingDelay: 10
+        homingPower: 0.12
+        despawnEffect: none
+        despawnHit: true
+        collidesTeam: true
+        collides: false
+        hitSound: plasma-bomb
+        hittable: false
+        hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+        type: ParticleEffect
+        particles: 13
+        sizeFrom: 3
+        sizeTo: 0
+        line: true
+        lifetime: 15
+        length: 40
+        baseLength: 4
+        colorTo: FFFFFF
+        colorFrom: 98FFA9
+        }
+        {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 20
+        lifetime: 16
+        strokeFrom: 5
+        strokeTo: 0
+        lenFrom: 0
+        lenTo: 10
+        colorTo: FFFFFF
+        colorFrom: 98FFA9
+        }
+        ]
+    }
+    shootEffect: {
+    type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            cone: 5
+            particles: 8
+            lifetime: 15
+            length: 20
+            colorTo: FFFFFF00
+            colorFrom: 98FFA9
+            sizeFrom: 3
+            sizeTo: 0.2
+        }
+        {
+            type: ParticleEffect
+            cone: 5
+            particles: 8
+            lifetime: 15
+            length: 30
+            colorTo: FFFFFF00
+            colorFrom: 98FFA9
+            sizeFrom: 1
+            sizeTo: 0.2
+        }
+        {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 5
+        lifetime: 12
+        strokeFrom: 2
+        strokeTo: 0
+        lenFrom: 0
+        lenTo: 2
+        colorTo: FFFFFF
+        colorFrom: 98FFA9
+        }
+    ]
+    }
+    smokeEffect: none
+    fragBullets: 1
+    fragRandomSpread: 0
+    fragBullet: {
+        type: LaserBulletType
+        damage: 20
+        length: 100
+        width: 4
+        sideLength: 10
+        sideWidth: 2
+        recoil: 0.1
+        colors: ["98FFA9","FFFFFF"]
+        status: electrified
+        statusDuration: 100
+        lifetime: 20
+        pierce: true
+        healPercent: 10
+        }
+}
+}
+    {
+    name:vitalis-side-weapon
+    x:6.5
+    y:-6
+    shootSound: lasershoot
+    heatColor: 98FFA9
+    reload: 38
+    recoil: 2
+    recoilTime: 15
+    rotate: true
+    rotateSpeed: 3
+    mirror: true
+    alternate: true
+    top: true
+    layer: 0.001
+    shootY: 5
+    shoot: {
+    shots: 1
+    }
+    bullet: {
+        type:BasicBulletType
+        lifetime: 30
+        speed: 3
+        drag: -0.02
+        damage: 20
+        healPercent: 10
+        drawSize: 10
+        frontColor: FFFFFF
+        backColor: 98FFA9
+        width: 10
+        height: 10
+        status: electrified
+        statusDuration: 300
+        trailEffect: none
+        trailColor: 98FFA9
+        trailWidth: 1
+        trailLength: 5
+        homingRange: 50
+        homingDelay: 20
+        homingPower: 0.12
+        spin: 22
+        despawnEffect: none
+        collidesTeam: true
+        hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+        type: ParticleEffect
+        particles: 13
+        sizeFrom: 3
+        sizeTo: 0
+        line: true
+        lifetime: 15
+        length: 40
+        baseLength: 4
+        colorTo: FFFFFF
+        colorFrom: 98FFA9
+        }
+        {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 20
+        lifetime: 8
+        strokeFrom: 5
+        strokeTo: 0
+        lenFrom: 0
+        lenTo: 10
+        colorTo: FFFFFF
+        colorFrom: 98FFA9
+        }
+        ]
+    }
+    shootEffect: {
+    type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            cone: 5
+            particles: 8
+            lifetime: 15
+            length: 20
+            colorTo: FFFFFF00
+            colorFrom: 98FFA9
+            sizeFrom: 3
+            sizeTo: 0.2
+        }
+        {
+            type: ParticleEffect
+            cone: 5
+            particles: 8
+            lifetime: 15
+            length: 30
+            colorTo: FFFFFF00
+            colorFrom: 98FFA9
+            sizeFrom: 1
+            sizeTo: 0.2
+        }
+        {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 5
+        lifetime: 12
+        strokeFrom: 2
+        strokeTo: 0
+        lenFrom: 0
+        lenTo: 2
+        colorTo: FFFFFF
+        colorFrom: 98FFA9
+        }
+    ]
+    }
+    smokeEffect: none
+}
+}
+]

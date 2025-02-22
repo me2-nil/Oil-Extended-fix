@@ -1,0 +1,220 @@
+name: Brizzard
+description: Long range attack, Release a drone that can active a shield to block bullets.
+type: mech
+hitSize: 20
+health: 800
+armor: 10
+itemCapacity: 0
+speed: 0.35
+singleTarget: false
+targetGround: true
+targetAir: false
+omniMovement: true
+rotateSpeed: 2
+rotateShooting: false
+accel: 0.1
+drag: 0.1
+shadowElevationScl: 0.7
+immunities: [
+    freezing
+]
+weapons:[
+    {
+    name:brizzard-weapon
+    x: 12
+    y: 0
+    shootSound: artillery
+    reload: 90
+    recoil: 3
+    recoilTime: 120
+    cooldownTime: 100
+    rotate: false
+    rotateSpeed: 0
+    mirror: true
+    alternate: true
+    top: false
+    inaccuracy: 7
+    shootY: 7
+    shoot: {
+    shots: 1
+    }
+    bullet: {
+        type: ArtilleryBulletType
+        damage: 15
+        splashDamage: 50
+        splashDamageRadius: 60
+        speed: 6
+        width: 10
+        height: 15
+        bulletShrink: 0.5
+        collidesAir: false
+        frontColor: FFFFFF
+        backColor: A1FFF9
+        lifetime: 37
+        knockback: 3
+        pierce: false
+        collidesAir: false
+        collides: true
+        ammoMultiplier: 1
+        trailColor: A1FFF9
+        trailEffect: none
+        trailWidth: 2
+        trailLength: 5
+        status: blasted
+        statusDuration: 300
+        hitSound: explosion
+        despawnHit: true
+            despawnEffect: none
+            hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 30
+            sizeFrom: 3
+            sizeTo: 0
+            line: true
+            lifetime: 10
+            length: 62
+            baseLength: 10
+            colorTo: A1FFF9
+            colorFrom: FFFFFF
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 60
+            lifetime: 15
+            strokeFrom: 6
+            strokeTo: 0
+            colorTo: A1FFF9
+            colorFrom: FFFFFF
+        }
+        {
+            type: ParticleEffect
+            particles: 30
+            sizeFrom: 5
+            sizeTo: 0
+            lifetime: 50
+            length: 20
+            baseLength: 20
+            colorTo: FFFFFF30
+            colorFrom: FFFFFF30
+            lightOpacity: 0
+            lightScl: 0
+            layer: 120.1
+            interp: pow3Out
+            sizeInterp: pow10In
+        }
+        {
+            type: ParticleEffect
+            particles: 20
+            sizeFrom: 6
+            sizeTo: 0
+            lifetime: 40
+            length: 15
+            baseLength: 20
+            colorTo: FFFFFF30
+            colorFrom: FFFFFF30
+            lightOpacity: 0
+            lightScl: 0
+            layer: 120.1
+            sizeInterp: pow3In
+        }
+        {
+            type: ParticleEffect
+            particles: 20
+            sizeFrom: 7
+            sizeTo: 0
+            lifetime: 30
+            length: 25
+            baseLength: 10
+            colorTo: FFFFFF30
+            colorFrom: FFFFFF30
+            lightOpacity: 0
+            lightScl: 0
+            layer: 120.1
+            sizeInterp: pow3In
+        }
+            ]
+            }
+        shootEffect: {
+            lightScl: 1
+            lightOpacity: 0.3
+            length: 0
+            offset: 270
+            cone: 0
+            particles: 1
+            lifetime: 10
+            sizeFrom: 30
+            sizeTo: 0
+            colorTo: A1FFF9
+            colorFrom: FFFFFF
+            region: oe-shotgunshootspike
+        }
+    
+    smokeEffect: {
+        type: MultiEffect
+            effects: [
+        {
+            type: ParticleEffect
+            particles: 6
+            lifetime: 15
+            length: 10
+            cone: 5
+            colorTo: A1FFF9
+            colorFrom: FFFFFF
+            sizeFrom: 1.5
+            sizeTo: 0
+        }
+    ]
+    }
+}
+}
+{
+    name:brizzard-SnowflakeSpawner
+    x: 6
+    y: -5
+    shootSound: nine
+    reload: 2200
+    rotate: true
+    rotateSpeed: 99
+    mirror: true
+    alternate: true
+    shoot: {
+    shots: 2
+    }
+    bullet: {
+        type: BulletType
+        damage: 0
+        speed: 0
+        width: 0
+        height: 0
+        lifetime: 0
+        rangeOverride: 180
+        collidesAir: false
+        spawnUnit: snowflake
+        hitSound: spawn
+        despawnHit: true
+        despawnEffect: none
+        hitEffect: none
+    smokeEffect: {
+        type: MultiEffect
+            effects: [
+        {
+            type: ParticleEffect
+            followParent:false
+            particles: 6
+            lifetime: 60
+            length: 4
+            colorTo: FFFFFF50
+            colorFrom: FFFFFF50
+            sizeFrom: 4
+            sizeTo: 0
+            layer: 120.1
+        }
+    ]
+    }
+}
+}
+]
