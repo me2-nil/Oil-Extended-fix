@@ -1,0 +1,50 @@
+type: GenericCrafter
+name: Molecular transducer
+description: Change the molecular image and make it a stable multi-material.
+health: 720
+size: 3
+hasPower: true
+hasLiquids: false
+hasItems: false
+itemCapacity: 60
+craftTime: 180
+consumes:{
+    power: 3
+    items: {
+        items: [
+        thorium/5
+        surge-alloy/1
+        stranth/10
+        ]
+    }
+}
+
+outputItems: [
+nanometal/1
+]
+
+requirements: [
+  titanium/100
+  silicon/80
+  thorium/180
+  stranth/300
+]
+category: crafting
+research: surge-alloy
+idleSound: respawning
+idleSoundVolume: 0.5
+
+drawer: {
+    type: drawMulti
+    drawers: [
+    {
+    type: drawDefault
+    }
+    {
+    type:drawGlowRegion
+    suffix: "-glow"
+    color: FFC676
+    alpha: 1.2
+    }
+  ]
+}
