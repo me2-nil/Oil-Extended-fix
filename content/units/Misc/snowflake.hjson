@@ -1,0 +1,74 @@
+name: Blaze
+description: Firing Support and Shield
+flying: true
+type: missile
+hitSize: 10
+health: 100
+armor: 5
+lifetime: 1200
+itemCapacity: 20
+speed: 1.5
+rotateSpeed: 6
+rotateShooting: true
+circleTarget: false
+faceTarget: true
+accel: 0.2
+drag: 0.1
+itemOffsetY: 5
+engineSize: 2.5
+engineOffset: 6
+targetPriority: -0.1
+controller: FlyingAI
+useUnitCap: false
+playerControllable: false
+targetFlags: [ "turret" ]
+abilities: [
+    {
+    type: ShieldArcAbility
+    max: 1000
+    y: -30
+    x: 0
+    radius: 50
+    angle: 75
+    width: 5
+    regen: 0.3334
+    cooldown: 60
+    whenShooting: true
+    }
+]
+weapons:[
+    {
+    name:freezing
+    x:0
+    y:2
+    shootSound: laser
+    reload: 90
+    recoil: 0.5
+    recoilTime: 5
+    rotate: false
+    rotateSpeed: 0
+    mirror: false
+    alternate: false
+    top: false
+    layerOffset:-0.001
+    inaccuracy: 0
+    shootY: 2
+    shoot: {
+    shots: 1
+    }
+    bullet: {
+        type: LaserBulletType
+        damage: 10
+        length: 120
+        width: 8
+        sideLength: 10
+        sideWidth: 2
+        recoil: 0.1
+        color: ["22FFF1","A1FFF9","FFFFFF"]
+        status: freezing
+        statusDuration: 100
+        lifetime: 10
+        pierce: true
+        }
+}
+]
