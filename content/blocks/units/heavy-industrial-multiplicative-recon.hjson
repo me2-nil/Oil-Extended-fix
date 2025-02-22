@@ -1,6 +1,6 @@
 
 type: Reconstructor
-name: Industral Additive Reconstructor
+name: Heavy Industral Additive Reconstructor
 description: Upgrade inputted tank from tier 2 to tier 3. And Upgrade mutant vanilla units
 size:5
 liquidCapacity: 80
