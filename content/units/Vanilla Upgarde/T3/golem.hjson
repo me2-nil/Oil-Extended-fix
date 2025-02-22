@@ -23,7 +23,7 @@ healColor: FFDB7C
 abilities: [
     {
     type: RegenAbility
-    percentAmount: 0.03334
+    percentAmount: 0.01667
     }
 ]
 weapons:[
