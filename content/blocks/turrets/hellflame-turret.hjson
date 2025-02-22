@@ -137,7 +137,7 @@ ammoTypes: {
 blast-compound: {
         type:BulletType
         lifetime: 8
-        speed: 80
+        speed: 8
         damage: 42
         hittable: false
         absorbable: false
