@@ -4,7 +4,7 @@ description: Early Game Small Cannon, Shoot Explodesive Bullet
 health: 320
 size: 1
 targetGround: true
-targetAir: false
+targetAir: true
 reload: 120
 range: 150
 rotateSpeed: 6.4
