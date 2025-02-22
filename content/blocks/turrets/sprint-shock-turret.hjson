@@ -4,7 +4,7 @@ description: Charge And Shoot Electric Balls,Long Reload ,
 health: 1200
 size: 2
 targetGround: true
-targetAir: false
+targetAir: true
 reload: 120
 range: 150
 rotateSpeed: 6.4
