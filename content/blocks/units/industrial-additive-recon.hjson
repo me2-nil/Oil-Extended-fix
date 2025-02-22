@@ -12,7 +12,7 @@ consumes: {
     ]
     liquids:{
         liquids:[
-        diesel/0.3
+        oil/0.1
         ]
     }
     }
