@@ -5,8 +5,8 @@ health: 320
 size: 1
 targetGround: true
 targetAir: true
-reload: 120
-range: 150
+reload: 80
+range: 180
 rotateSpeed: 6.4
 inaccuracy: 2
 recoil: 1
@@ -28,7 +28,7 @@ ammoTypes: {
         copper: {
         type: BasicBulletType
         damage: 0
-        splashDamage: 22
+        splashDamage: 42
         splashDamageRadius: 15
         speed: 8
         width: 10
