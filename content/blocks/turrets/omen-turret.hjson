@@ -1,6 +1,6 @@
 type: ItemTurret
 name: Omen
-description: 
+description: Creates a laser net that damages enemies in the area, Attacks from a very long distance
 health: 2500
 size: 4
 targetGround: true
