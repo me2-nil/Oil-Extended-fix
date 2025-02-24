@@ -1,0 +1,45 @@
+type: missile
+hidden: true
+targetAir: true
+targetGround: true
+speed: 5
+accel: 0.05
+missileAccelTime: 10
+flying: true
+rotateSpeed: 6
+controller: MissileAI
+maxRange: 210
+lifetime: 50
+engineColor: FFB36B
+engineSize: 2
+health: 50
+useUnitsCap: false
+isEnemy: false
+lowAltitude: true
+physics: false
+playerControllable: false
+targetable: false
+loopSoundVolume: 0.3
+homingDelay: 15
+trailColor: FFB36B80
+trailLength: 8
+bounded: false
+useUnitCap: false
+createWreck: false
+  weapons: [
+  {
+    shootCone: 360
+    mirror: false
+    reload: 1
+    shootOnDeath: true
+    bullet: {
+      damage:40
+      splashDamage:40
+      splashDamageRadius: 45
+      type: ExplosionBulletType
+      collidesAir: true
+      collidesGround: true
+      instantDisappear: true
+    }
+  }
+]
