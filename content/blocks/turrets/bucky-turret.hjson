@@ -22,7 +22,7 @@ consumes: {
 }
 shootY: 8
 maxAmmo: 30
-ammoPerShot: 5
+ammoPerShot: 3
 ammoTypes: {
         copper: {
         type: BasicBulletType
