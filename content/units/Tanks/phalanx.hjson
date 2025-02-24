@@ -1,0 +1,596 @@
+
+type: tank
+name: Phalanx
+description: The army advances as a shield for a fast-moving team with a variety of weapons, providing a durable buff to nearby teammates.
+hitSize: 47
+singleTarget: false
+omniMovement: false
+rotateMoveFirst: true
+faceTarget: false
+targetGround: true
+targetAir: true
+health: 6000
+armor: 12
+speed: 0.35
+rotateSpeed: 1.2
+itemCapacity: 0
+crushDamage: 0.8
+treadRects: [
+    {
+    x:48
+    y:-42
+    height: 89
+    width: 30
+    }
+]
+immunities: [
+    burning
+    melting
+]
+abilities: [
+    {
+    type: ShieldArcAbility
+    max: 2000
+    y: -55
+    x: 0
+    radius: 80
+    angle: 120
+    width: 12
+    regen: 1.667
+    cooldown: 300
+    whenShooting: true
+    region: "oe-phalanx-shield"
+    }
+    {
+    type: StatusFieldAbility
+    effect: durable
+    range: 200
+    duration: 125
+    reload: 120
+    }
+]
+// MAIN GUN
+weapons: [
+    {
+    name: phalanx-main-weapon
+    layerOffset: 4
+    x: 0
+    y: 0
+    shoot: {
+    shots: 1
+    }
+    shootSound: largeCannon
+    reload: 180
+    recoil: 0
+    recoilTime: 64
+    cooldownTime: 160
+    shake: 10
+    rotate: true
+    rotateSpeed:1.4
+    mirror: false
+    shootCone: 2
+    inaccuracy: 2
+    shootY: 14
+    parts: [
+    {
+        type: RegionPart
+        mirror: false
+        suffix: -barrel
+        under: false
+        layerOffset: -0.1
+        moveY: 0
+        progress: recoil
+        heatProgress: recoil
+        heatColor: FF7959
+        moves: [
+            {
+            progress: recoil
+            y: -8
+            }
+          ]
+        }
+      ]
+    bullet: {
+        type: ShrapnelBulletType
+        damage: 210
+        length: 250
+        width: 30
+        collidesAir: false
+        toColor: FFF3B6
+        fromColor: FFA67C
+        lifetime: 13
+        pierce: true
+        ammoMultiplier: 1
+        trailColor: FFA166
+        trailEffect: none
+        trailWidth: 2
+        trailLength: 10
+        hitSound: explosion
+        serrations: 0
+        despawnHit: true
+            despawnEffect: none
+            hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 12
+            sizeFrom: 1.5
+            sizeTo: 0
+            line: true
+            lifetime: 10
+            length: 32
+            baseLength: 4
+            colorTo: FFA166
+            colorFrom: FFFFFF
+        }
+        {
+            type: ParticleEffect
+            particles: 20
+            sizeFrom: 5
+            sizeTo: 0
+            lifetime: 400
+            length: 30
+            baseLength: 20
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF40
+            interp: pow3Out
+            sizeInterp: circle
+            lightOpacity: 0
+            lightScl: 0
+            layer: 130
+        }
+            ]
+            }
+        shootEffect: none
+        smokeEffect: {
+            type: MultiEffect
+                effects: [
+                {
+                type: ParticleEffect
+                particles: 50
+                lifetime: 300
+                length: 260
+                cone: 3
+                colorTo: FFFFFF00
+                colorFrom: FFFFFF50
+                sizeFrom: 10
+                sizeTo: 5
+                interp: pow10Out
+                sizeInterp: pow3Out
+                layer: 130
+                followParent: false
+                }
+                {
+                type: ParticleEffect
+                particles: 30
+                lifetime: 280
+                length: 250
+                cone: 4
+                colorTo: FFFFFF00
+                colorFrom: FFFFFF60
+                sizeFrom: 8
+                sizeTo: 3
+                interp: pow10Out
+                sizeInterp: pow3Out
+                layer: 130
+                followParent: false
+                }
+                {
+                type: ParticleEffect
+                particles: 60
+                lifetime: 260
+                length: 240
+                cone: 5
+                colorTo: FFFFFF00
+                colorFrom: FFFFFF70
+                sizeFrom: 5
+                sizeTo: 1
+                interp: pow10Out
+                sizeInterp: pow3Out
+                layer: 130
+                followParent: false
+                }
+                ]
+            }
+        }
+    }
+// FLAME GUN
+    {
+    name: phalanx-flame-weapon
+    layerOffset: 0.5
+    x: 15
+    y: -10
+    shoot: {
+    shots: 1
+    }
+    shootSound: flame
+    reload: 4
+    recoil: 1
+    recoilTime: 5
+    rotate: true
+    rotateSpeed:5
+    mirror: true
+    alternate: false
+    shootCone: 2
+    inaccuracy: 2
+    shootY: 5
+    bullet: {
+        type:BulletType
+        lifetime: 4
+        speed: 15
+        damage: 22
+        hittable: false
+        absorbable: false
+        pierce: true
+        pierceBuilding: true
+        makeFire: true
+        status: melting
+        statusDuration: 120
+        inaccuracy: 7
+        despawnEffect: none
+        hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 6
+            sizeFrom: 2
+            sizeTo: 0
+            lifetime: 40
+            length: 7
+            baseLength: 20
+            colorTo: 4B0011
+            colorFrom: FFB266
+        }
+        {
+            type: ParticleEffect
+            particles: 6
+            sizeFrom: 1
+            sizeTo: 0
+            lifetime: 15
+            length: 5
+            baseLength: 20
+            colorTo: FFAA75
+            colorFrom: FF6B0E
+            
+            }
+        ]
+    }
+    shootEffect: {
+    type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            cone: 7
+            particles: 6
+            lifetime: 10
+            length: 70
+            colorTo: FFAA75
+            colorFrom: FFFFFF
+            sizeFrom: 1.2
+            sizeTo: 0.2
+        }
+        {
+            type: ParticleEffect
+            cone: 7
+            particles: 3
+            lifetime: 30
+            length: 80
+            colorTo: FFD7D3
+            colorFrom: FFCD86
+            sizeFrom: 2
+            sizeTo: 0.2
+        }
+    ]
+}
+
+    smokeEffect: {
+    type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            cone: 7
+            particles: 6
+            lifetime: 20
+            length: 80
+            colorTo: FFAA75
+            colorFrom: FF6B0E
+            sizeFrom: 2.3
+            sizeTo: 0.2
+        }
+        {
+            type: ParticleEffect
+            cone: 7
+            particles: 3
+            lifetime: 30
+            length: 85
+            colorFrom: FFF1BD
+            colorTo: FF6B0E
+            sizeFrom: 3
+            sizeTo: 0.2
+        }
+        {
+            type: ParticleEffect
+            cone: 7
+            particles: 3
+            lifetime: 10
+            length: 90
+            colorFrom: FFF1BD
+            colorTo: CFCFCF20
+            sizeFrom: 1
+            sizeTo: 0.4
+        }
+    ]
+    }
+    }
+    }
+// SMALL FRONT GUN
+    {
+    name: phalanx-front-weapon
+    layerOffset: 1
+    x: 5
+    y: 15
+    shoot: {
+    shots: 1
+    }
+    shootSound: shoot
+    reload: 10
+    recoil: 1
+    recoilTime: 6
+    rotate: true
+    rotateSpeed: 4.5
+    mirror: true
+    alternate: false
+    shootCone: 2
+    inaccuracy: 2
+    shootY: 5
+    bullet: {
+        type: BasicBulletType
+        damage: 24
+        speed: 8
+        width: 5
+        height: 7
+        bulletShrink: 0.5
+        collidesAir: true
+        frontColor: FFFFFF
+        backColor: FFDE9B
+        lifetime: 14
+        knockback: 1.5
+        pierce: false
+        trailColor: FFDE9B
+        trailEffect: none
+        trailWidth: 1
+        trailLength: 5
+        despawnHit: true
+        despawnEffect: none
+        hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 12
+            sizeFrom: 1.5
+            sizeTo: 0
+            line: true
+            lifetime: 10
+            length: 18
+            baseLength: 4
+            colorTo: FFFFFF
+            colorFrom: FFDE9B
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 15
+            lifetime: 15
+            strokeFrom: 1.5
+            strokeTo: 0
+            colorTo: FFFFFF
+            colorFrom: FFDE9B
+            }
+        ]
+    }
+    shootEffect: {
+        lightScl: 1
+        lightOpacity: 0.3
+        length: 0
+        offset: 270
+        cone: 0
+        particles: 1
+        lifetime: 10
+        sizeFrom: 10
+        sizeTo: 0
+        colorTo: FFFFFF
+        colorFrom: FFDE9B
+        region: oe-shotgunshootspike
+        }
+    smokeEffect: {
+        type: MultiEffect
+            effects: [
+            {
+                type: ParticleEffect
+                particles: 6
+                lifetime: 15
+                length: 10
+                cone: 5
+                colorTo: FFC677
+                colorFrom: FFC677
+                sizeFrom: 1.5
+                sizeTo: 0
+                }
+            ]
+        }
+    }
+}
+// FRONT CANNON
+{
+    name: phalanx-cannon-weapon
+    layerOffset: 2
+    x: 10
+    y: 10
+    shoot: {
+    shots: 1
+    }
+    shootSound: cannon
+    reload: 40
+    recoil: 0
+    recoilTime: 32
+    rotate: true
+    rotateSpeed:3.5
+    mirror: true
+    alternate: false
+    shootCone: 2
+    inaccuracy: 2
+    shootY: 14
+    parts: [
+    {
+        type: RegionPart
+        mirror: false
+        suffix: -barrel
+        under: false
+        layerOffset: -0.5
+        moveY: 0
+        progress: recoil
+        heatProgress: recoil
+        heatColor: FF7959
+        moves: [
+            {
+            progress: recoil
+            y: -4
+            }
+          ]
+        }
+      ]
+    bullet: {
+        type: BasicBulletType
+        damage: 0
+        splashDamage: 50
+        splashDamageRadius: 30
+        speed: 10
+        width: 10
+        height: 15
+        bulletShrink: 0.5
+        collidesAir: false
+        frontColor: FFFFFF
+        backColor: FFDE9B
+        lifetime: 12
+        knockback: 3
+        pierce: false
+        collidesAir: false
+        ammoMultiplier: 1
+        trailColor: FFDE9B
+        trailEffect: none
+        trailWidth: 2
+        trailLength: 5
+        hitSound: explosion
+        despawnHit: true
+            despawnEffect: none
+            hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 12
+            sizeFrom: 1.5
+            sizeTo: 0
+            line: true
+            lifetime: 10
+            length: 32
+            baseLength: 4
+            colorTo: FFDE9B
+            colorFrom: FFFFFF
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 32
+            lifetime: 12
+            strokeFrom: 5
+            strokeTo: 0
+            colorTo: FFDE9B00
+            colorFrom: FFFFFF
+        }
+        {
+            type: ParticleEffect
+            particles: 20
+            sizeFrom: 5
+            sizeTo: 0
+            lifetime: 80
+            length: 30
+            baseLength: 20
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF20
+            lightOpacity: 0
+            lightScl: 0
+        }
+            ]
+            }
+        shootEffect: {
+            lightScl: 1
+            lightOpacity: 0.3
+            length: 0
+            offset: 270
+            cone: 0
+            particles: 1
+            lifetime: 10
+            sizeFrom: 15
+            sizeTo: 0
+            colorTo: FFDE9B
+            colorFrom: FFFFFF
+            region: oe-shotgunshootspike
+        }
+        smokeEffect: {
+            type: MultiEffect
+                effects: [
+            {
+                type: ParticleEffect
+                particles: 6
+                lifetime: 15
+                length: 10
+                cone: 5
+                colorTo: FFA166
+                colorFrom: FFFFFF
+                sizeFrom: 1.5
+                sizeTo: 0
+                    }
+                ]
+            }
+        }
+    }
+//  ROCKET GUN
+    {
+    name: phalanx-missile
+    layerOffset: 0.5
+    x: 10
+    y: -17
+    shoot: {
+    shots: 10
+    shotDelay: 5
+    }
+    shootSound: missileSmall
+    reload: 240
+    recoil: 1
+    recoilTime: 5
+    rotate: true
+    rotateSpeed:5
+    mirror: true
+    alternate: true
+    shootCone: 180
+    inaccuracy: 30
+    shootY: 5
+    bullet: {
+        type: BulletType
+        speed: 0
+        width: 0
+        height: 0
+        lifetime: 0
+        rangeOverride: 220
+        spawnUnit: phalanx-rocket
+        despawnHit: true
+        despawnEffect: none
+        hitEffect: none
+        smokeEffect: none
+    }
+}
+]
