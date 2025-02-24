@@ -1,0 +1,27 @@
+type: CoreBlock
+name: Core: Delta
+description: Advance ground core. With combat ground builder.
+fogRadius: 30
+  requirements: [
+    plastanium/800
+    lead/1000
+    silicon/800
+    metaglass/800
+  ]
+  isFirstTier: true
+  size: 3
+  squareSprite: false
+  alwaysUnlocked: true
+  unitType: delta
+  health: 1000
+  itemCapacity: 5000
+  unitCapModifier: 2
+  thrusterLength: 2
+  category: effect
+  research: {
+    planet: dry-out
+    root: true
+    name: dry-out
+    requiresUnlock: false
+  }
+  researchCostMultiplier: 1
