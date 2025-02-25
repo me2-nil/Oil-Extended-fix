@@ -1,0 +1,128 @@
+name: Epsilon
+description: A player-controlled construction robot with a combat laser drill deals high damage to weak buildings, but deals enough damage to destroy buildings.fast mining speed . active shield on shooting. and give overdrive to nearby teammate.
+type: legs
+hitSize: 14
+health: 560
+armor: 5
+itemCapacity: 100
+speed: 1.2
+hovering: true
+faceTarget: true
+targetGround: true
+targetAir: true
+rotateSpeed: 4.2
+rotateShooting: false
+groundLayer: 75.2
+fogRadius: 15
+range: 20
+legCount: 6
+legLength: 12
+legStraightness: 0.1
+legSpeed: 1.2
+legGroupSize: 3
+legBaseOffset: 2
+legMoveSpace: 1
+legMaxLenght: 1.7
+legMinLenght: 0
+legLengthScl: 1.1
+legForwardScl: 0.1
+legContinuousMove: true
+lockLegBase: false
+rippleScale: 0.9
+
+accel: 0.1
+drag: 0.1
+shadowElevationScl: 0.7
+
+mineFloor: true
+mineSpeed: 10
+mineTier: 2
+mineRange: 50
+
+buildSpeed: 0.9
+buildRange: 100
+abilities: [
+    {
+    type: ShieldArcAbility
+    max: 1000
+    y: -63
+    x: 0
+    radius: 80
+    angle: 45
+    width: 6
+    regen: 1.667
+    cooldown: 120
+    whenShooting: true
+    }
+    {
+    type: StatusFieldAbility
+    effect: overdrive
+    range: 100
+    duration: 125
+    reload: 60
+    activeEffect: none
+    }
+]
+weapons:[
+{
+    name:epsilon-beam-weapon
+    x:0
+    y:-5
+    shootSound: lasershoot
+    shootSoundVolume: 0.3
+    recoil: 2
+    recoilTime: 15
+    rotate: true
+    rotateSpeed: 2
+    mirror: true
+    alternate: false
+    top: true
+    ignoreRotation: true
+    shootCone: 180
+    shoot: {
+    shots: 1
+    }
+    bullet: {
+        type: LaserBulletType
+        damage: 6
+        length: 32
+        width: 8
+        sideLength: 0
+        sideWidth: 0
+        rangeOverride: 60
+        colors: ["FFA157","FFFFFF"]
+        lifetime: 6
+        pierce: true
+        buildingDamageMultiplier: 0.5
+        laserEffect: none
+        shootEffect: none
+        hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 1
+            sizeFrom: 1.5
+            sizeTo: 0
+            line: true
+            lifetime: 8
+            length: 17
+            baseLength: 4
+            colorTo: FFFFFF
+            colorFrom: FFDE9B
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 4
+            lifetime: 7
+            strokeFrom: 1.5
+            strokeTo: 0
+            colorTo: FFFFFF
+            colorFrom: FFDE9B
+            }
+        ]
+    }
+        }
+}
+]
