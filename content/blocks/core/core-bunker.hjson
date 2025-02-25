@@ -1,0 +1,27 @@
+type: CoreBlock
+name: Core: Bunker
+description: Advance ground core. With combat ground builder.
+fogRadius: 30
+  requirements: [
+    plastanium/2000
+    titanium/3000
+    lead/5000
+    silicon/3000
+    metaglass/3000
+  ]
+  size: 4
+  squareSprite: false
+  alwaysUnlocked: true
+  unitType: epsilon
+  health: 1000
+  itemCapacity: 5000
+  unitCapModifier: 27
+  thrusterLength: 2
+  category: effect
+  research: {
+    planet: dry-out
+    root: true
+    name: dry-out
+    requiresUnlock: false
+  }
+  researchCostMultiplier: 1
