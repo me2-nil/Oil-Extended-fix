@@ -1,7 +1,7 @@
 type: CoreBlock
-name: Core: Delta
+name: Core: Duty
 description: Advance ground core. With combat ground builder.
-fogRadius: 30
+fogRadius: 20
   requirements: [
     plastanium/800
     lead/1000
