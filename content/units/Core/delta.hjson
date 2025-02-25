@@ -52,7 +52,7 @@ weapons:[
     x:5
     y:0
     shootSound: pew
-    reload: 4
+    reload: 8
     recoil: 2
     recoilTime: 15
     rotate: false
