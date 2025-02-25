@@ -3,7 +3,7 @@ hidden: true
 targetAir: true
 targetGround: true
 speed: 5
-accel: 0.05
+accel: 0.5
 missileAccelTime: 10
 flying: true
 rotateSpeed: 6
