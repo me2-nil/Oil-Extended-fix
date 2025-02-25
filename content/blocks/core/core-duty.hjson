@@ -15,7 +15,7 @@ fogRadius: 30
   unitType: delta
   health: 1000
   itemCapacity: 5000
-  unitCapModifier: 2
+  unitCapModifier: 15
   thrusterLength: 2
   category: effect
   research: {
