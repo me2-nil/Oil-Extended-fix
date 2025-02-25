@@ -34,7 +34,7 @@ drag: 0.1
 shadowElevationScl: 0.7
 
 mineFloor: true
-mineSpeed: 7.5
+mineSpeed: 5.5
 mineTier: 2
 mineRange: 50
 
