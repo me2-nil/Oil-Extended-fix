@@ -4,7 +4,7 @@ type: legs
 hitSize: 8
 health: 320
 armor: 3
-itemCapacity: 100
+itemCapacity: 50
 speed: 0.8
 hovering: true
 faceTarget: true
@@ -34,7 +34,7 @@ drag: 0.1
 shadowElevationScl: 0.7
 
 mineFloor: true
-mineSpeed: 10
+mineSpeed: 7.5
 mineTier: 2
 mineRange: 50
 
@@ -81,7 +81,7 @@ weapons:[
         trailLength: 2
         despawnHit: true
         despawnEffect: none
-        buildingDamageMultiplier: 0.5
+        buildingDamageMultiplier: 0.3
         hitEffect: {
         type: MultiEffect
         effects: [
