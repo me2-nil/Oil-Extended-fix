@@ -8,7 +8,7 @@ hasLiquids: true
 liquidCapacity: 50
 itemCapacity: 30
 hasItems: true
-craftTime: 30
+craftTime: 15
 
 researchCostMultiplier: 0.2
 requirements: [
