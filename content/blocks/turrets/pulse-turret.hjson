@@ -5,7 +5,7 @@ health: 220
 size: 1
 targetGround: true
 targetAir: true
-reload: 50
+reload: 20
 range: 100
 rotateSpeed: 6.4
 inaccuracy: 2
