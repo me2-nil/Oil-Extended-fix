@@ -1,0 +1,41 @@
+type: OverdriveProjector
+size: 2
+name: Nano Overdrive Node
+description: Very Useful For Any Block That Can Boost,Warning:Beware Of Sudden Power Depletion And Faster Resource Usage May Cause Resources To Not Be Replenished In Time.
+health: 1200
+range: 15
+phaseRangeBoost: 5
+speedBoost: 10
+speedBoostPhase: 5
+useTime: 10
+baseColor: FFA575
+hasBoost: true
+consumes: {
+  power: 50
+  liquids:{
+    liquids:[
+      raditor-oil/2
+    ]
+  }
+  items: {
+    items: [
+      phase-fabric/1
+    ]
+    booster: true
+    optional: true
+  }
+}
+
+requirements: [
+  stranth/350
+  phase-fabric/300
+  silicon/300
+  thorium/300
+  nanometal/300
+  surge-alloy/150
+]
+
+researchCostMultiplier: 0.3
+
+category: effect
+research: overdriver-dome
