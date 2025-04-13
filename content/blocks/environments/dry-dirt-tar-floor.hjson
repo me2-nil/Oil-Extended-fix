@@ -1,0 +1,8 @@
+type: floor
+name: Dry Dirt Floor
+variants: 3
+attributes: {
+    oil: 1.2
+    water: -1
+}
+wall: dry-dirt-wall
