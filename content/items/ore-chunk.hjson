@@ -1,0 +1,4 @@
+type: resource
+name: Ore Chunk
+description: Many ore come together with dirt and mud. Some ore are not usable, so only some are usable.
+color:775847
