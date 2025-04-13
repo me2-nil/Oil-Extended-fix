@@ -1,0 +1,140 @@
+type: ItemTurret
+name: Molotov
+description: Make Oil Puddles On Ground And then light the Fire,Very Long Time Reload, Be Careful It Can Be Friendly-Fire, Cannot Use Coolant, Cant Shoot Close Target
+health: 2200
+size: 4
+targetGround: true
+targetAir: false
+reload: 600
+range: 560
+minRange: 200
+rotateSpeed: 6.4
+recoil: 3
+researchCostMultiplier: 0.2
+liquidCapacity: 20
+hasLiquid: true
+hasItem: true
+shootSound: shootBig
+shootY: 12
+maxAmmo: 30
+ammoPerShot: 5
+
+shootEffect: none
+smokeEffect: {
+    type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 6
+            lifetime: 15
+            length: 5
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF55
+            sizeFrom: 2
+            sizeTo: 0.2
+        }
+        {
+            type: ParticleEffect
+            particles: 3
+            lifetime: 15
+            length: 5
+            colorTo: 55555500
+            colorFrom: 55555555
+            sizeFrom: 4
+            sizeTo: 0.2
+        }
+    ]
+}
+
+ammoTypes: {
+        pyratite: {
+        type: ArtilleryBulletType
+        damage: 30
+        speed: 5
+        width: 30
+        height: 30
+        bulletShrink: 0.5
+        frontColor: FFFFFF
+        backColor: FFFFFF
+        lifetime: 64
+        knockback: 1.5
+        ammoMultiplier: 1
+        trailColor: FFFFFF55
+        trailWidth: 8
+        trailLength: 9
+        inaccuracy: 10
+        makeFire: true
+        puddles: 60
+        puddleRange: 50
+        puddleAmount: 100
+        puddleLiquid: oil
+        fragVelocityMax: 0.15
+        fragVelocityMin: 0.1
+        fragBullets: 20
+        fragRandomSpread: 360
+            fragBullet: {
+            type: BasicBulletType
+            damage: 5
+            speed: 1
+            width: 10
+            height: 15
+            bulletShrink: 0.5
+            frontColor: FFAA75
+            backColor: FF6B0E
+            lifetime: 64
+            knockback: 1.5
+            ammoMultiplier: 1
+            trailColor: FFAA75
+            trailWidth: 2
+            trailLength: 9
+            hittable: false
+            makeFire: true
+            puddles: 20
+            puddleRange: 5
+            puddleAmount: 30
+            puddleLiquid: slag
+            despawnHit: true
+            }
+        despawnHit: true
+        despawnEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 3
+            line: false
+            sizeFrom: 4
+            sizeTo: 0
+            lifetime: 15
+            length: 10
+            baseLength: 20
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 15
+            lifetime: 10
+            strokeFrom: 1.5
+            strokeTo: 0
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF
+            }
+        ]
+    }
+            hitEffect: none
+}
+}
+shoot: {
+    shots: 3
+    }
+
+requirements: [
+titanium/50
+silicon/35
+stranth/120
+graphite/50
+]
+category: turret
+research: tsunami

@@ -1,0 +1,351 @@
+type: ItemTurret
+name: Dragon Claws
+description: Shoot guided projectile.every last projectile always is laser
+health: 720
+size: 2
+targetGround: true
+targetAir: true
+reload: 30
+range: 250
+rotateSpeed: 6.4
+recoil: 3
+researchCostMultiplier: 0.3
+liquidCapacity: 20
+hasLiquid: true
+hasItem: true
+shootSound: missileSmall
+consumes: {
+    coolant: {
+    amount: 0.2
+    optional: true
+    }
+}
+shootY: 8
+maxAmmo: 30
+ammoPerShot: 5
+ammoTypes: {
+        nanometal: {
+        type: BasicBulletType
+        parts: [
+            {
+            type: FlarePart
+            radius: 9
+            followRotation: true
+            spinSpeed: 6
+            color1: C269FF
+            color2: FFFFFF
+            }
+        ]
+        damage: 10
+        speed: 5
+        width: 1
+        height: 10
+        bulletShrink: 0.5
+        frontColor: FFFFFF
+        backColor: C269FF
+        lifetime: 40
+        knockback: 0.2
+        ammoMultiplier: 5
+        trailColor: C269FF
+        trailWidth: 4
+        trailLength: 10
+        inaccuracy: 20
+        homingPower: 0.04
+        homingRange: 30
+        homingDelay: 15
+        shootEffect: {
+            type: ParticleEffect
+            particles: 6
+            cone: 5
+            sizeFrom: 3
+            sizeTo: 0
+            lifetime: 10
+            colorTo: FFFFFF
+            colorFrom:C269FF
+            length: 30
+            }
+            despawnEffect: none
+            hitEffect: {
+            type: MultiEffect
+            effects: [
+            {
+            type: ParticleEffect
+            particles: 9
+            sizeFrom: 1.5
+            sizeTo: 0
+            line: true
+            lifetime: 15
+            length: 18
+            baseLength: 4
+            colorTo: FFFFFF
+            colorFrom: C269FF
+            }
+            {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 8
+            lifetime: 10
+            strokeFrom: 1.5
+            strokeTo: 0
+            colorTo: FFFFFF
+            colorFrom: C269FF
+            }
+            ]
+        }
+        fragVelocityMax: 1
+        fragVelocityMin: 1
+        fragBullets: 3
+        fragAngle: 0
+        fragSpread: 30
+        fragRandomSpread: 0
+            fragBullet: {
+            type: BasicBulletType
+            damage: 20
+            splashDamage: 20
+            splashDamageRadius: 30
+            status: oe-nanometal-corrupt
+            statusDuration: 300
+            speed: 7
+            drag: 0.1
+            width: 3
+            height: 3
+            sprite: large-bomb
+            shrinkY: -0.5
+            shrinkX: -0.5
+            hitSound: laser
+            frontColor: FFFFFF
+            backColor: C269FF
+            trailColor: C269FF
+            trailWidth: 2
+            trailLength: 10
+            lifetime: 20
+            despawnHit: true
+            despawnEffect: none
+            hitEffect: {
+            type: MultiEffect
+            effects: [
+            {
+            type: ParticleEffect
+            particles: 9
+            sizeFrom: 1.5
+            sizeTo: 0
+            line: true
+            lifetime: 10
+            length: 9
+            baseLength: 4
+            colorTo: FFFFFF
+            colorFrom: C269FF
+            }
+            {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 3
+            lifetime: 10
+            strokeFrom: 1.5
+            strokeTo: 0
+            colorTo: FFFFFF
+            colorFrom: C269FF
+            }
+            ]
+            }
+            fragBullets: 1
+            fragAngle: 0
+            fragSpread: 0
+            fragRandomSpread: 0
+            fragBullet: {
+            type: LaserBulletType
+            damage: 50
+            length: 35
+            width: 15
+            sideLength: 10
+            sideWidth: 2
+            recoil: 0.1
+            colors: ["C269FF","FFFFFF"]
+            status: oe-nanometal-corrupt
+            statusDuration: 300
+            lifetime: 10
+            pierce: true
+            buildingDamageMultiplier: 0.5
+            }
+        }
+        }
+    phase-fabric:{
+        type: BasicBulletType
+        parts: [
+            {
+            type: FlarePart
+            radius: 3
+            followRotation: false
+            color1: FFC37A
+            color2: FFFFFF
+            }
+        ]
+        damage: 10
+        speed: 3
+        width: 1
+        height: 10
+        bulletShrink: 0.5
+        frontColor: FFFFFF
+        backColor: FFC37A
+        lifetime: 50
+        knockback: 0.2
+        reloadMultiplier: 0.1
+        ammoMultiplier: 2
+        trailColor: FFC37A
+        trailWidth: 3
+        trailLength: 15
+        inaccuracy: 0
+        homingPower: 0.04
+        homingRange: 30
+        homingDelay: 15
+        despawnEffect: none
+        shootEffect: {
+        type: ParticleEffect
+        particles: 6
+        cone: 5
+        sizeFrom: 3
+        sizeTo: 0
+        lifetime: 10
+        colorTo: FFFFFF
+        colorFrom:FFC37A
+        length: 50
+        }
+        hitEffect: {
+            type: MultiEffect
+            effects: [
+            {
+            type: ParticleEffect
+            particles: 13
+            sizeFrom: 1.5
+            sizeTo: 0
+            line: true
+            lifetime: 15
+            length: 21
+            baseLength: 4
+            colorTo: FFFFFF
+            colorFrom: FFC37A
+            }
+            {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 10
+            lifetime: 15
+            strokeFrom: 1.5
+            strokeTo: 0
+            colorTo: FFFFFF
+            colorFrom: FFC37A
+            }
+            ]
+        }
+        fragVelocityMax: 0
+        fragVelocityMin: 0
+        fragBullets: 1
+        fragAngle: 0
+        fragSpread: 0
+        fragRandomSpread: 0
+            fragBullet: {
+            type: BasicBulletType
+            parts: [
+            {
+            type: FlarePart
+            radius: 14
+            spinSpeed: -5
+            followRotation: false
+            color1: FFC37A
+            color2: FFFFFF
+            }
+            {
+            type: FlarePart
+            radius: 18
+            followRotation: false
+            spinSpeed: 5
+            color1: FFC37A
+            color2: FFFFFF
+            }
+            ]
+            damage: 80
+            splashDamage: 120
+            splashDamageRadius: 50
+            speed: 0.5
+            width: 3
+            height: 3
+            sprite: large-bomb
+            hitSound: laser
+            shrinkY: -0.5
+            shrinkX: -0.5
+            hitSound: 
+            frontColor: FFFFFF
+            backColor: FFC37A
+            trailColor: FFC37A
+            trailWidth: 2
+            trailLength: 10
+            lifetime: 30
+            hittable: false
+            collides: false
+            despawnHit: true
+            despawnEffect: none
+            hitEffect: {
+            type: MultiEffect
+            effects: [
+            {
+            type: ParticleEffect
+            particles: 18
+            sizeFrom: 1.5
+            sizeTo: 0
+            line: true
+            lifetime: 15
+            length: 30
+            baseLength: 4
+            colorTo: FFFFFF
+            colorFrom: FFC37A
+            }
+            {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 12
+            lifetime: 20
+            strokeFrom: 3
+            strokeTo: 0
+            colorTo: FFFFFF
+            colorFrom: FFC37A
+            }
+            ]
+            }
+            bulletInterval: 2
+            intervalRandomSpread: 45
+            intervalDelay: 5
+            intervalBullet: {
+            type: LaserBulletType
+            damage: 30
+            length: 80
+            width: 25
+            sideLength: 10
+            sideWidth: 2
+            recoil: 0.1
+            colors: ["FFC37A","FFFFFF"]
+            lifetime: 15
+            pierce: true
+            buildingDamageMultiplier: 0.75
+            }
+        }
+    }
+}
+        smokeEffect: none
+        despawnEffect: none
+shoot: {
+    type: ShootBarrel
+    barrels: [
+    3,-2,0
+    -3,-2,0
+    ]
+    shots: 1
+    }
+
+requirements: [
+nanometal/85
+thorium/50
+stranth/110
+silicon/50
+]
+category: turret
+research: lancer

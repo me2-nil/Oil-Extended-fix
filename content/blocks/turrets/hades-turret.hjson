@@ -1,0 +1,515 @@
+type: ItemTurret
+name: Hades
+description: Fires a laser that deals damage in a long path that penetrates through buildings and units (it doesn't penetrate all at once, but gradually penetrates)
+health: 1650
+size: 3
+targetGround: true
+targetAir: true
+reload: 420
+range: 210
+minRange: 100
+rotateSpeed: 6.4
+recoil: 0.5
+recoilTime: 45
+cooldownTime: 180
+accurateDelay: true
+researchCostMultiplier: 0.2
+liquidCapacity: 20
+velocityRnd: 0
+minVelocity: 0
+moveWhileCharging: false
+hasPower: true
+hasLiquid: true
+hasItem: true
+shootSound: flame
+consumes: {
+    power: 45
+    coolant: {
+    amount: 0.1
+    optional: true
+    }
+}
+maxAmmo: 200
+ammoPerShot: 100
+shootY: 4
+ammoTypes: {
+        pyratite: {
+            type: BasicBulletType
+            lifetime: 10
+            damage: 13
+            splashDamage: 10
+            splashDamageRadius: 30
+            speed: 24
+            width: 20
+            height: 20
+            drawSize: 0.7
+            shrinkX: 0.6
+            shrinkY: 0.6
+            frontColor: FFFFFF
+            backColor: FF905E
+            ammoMultiplier: 1
+            trailColor: FF905E
+            trailWidth: 5
+            trailLength: 30
+            buildingDamageMultiplier: 0.5
+            inaccuracy: 0
+            makeFire: true
+            drag: 0.03
+            despawnHit: true
+            chargeEffect: {
+            type:MultiEffect
+            effects: [
+            {
+            type: ParticleEffect
+            particles: 10
+            sizeFrom: 0
+            sizeTo: 2
+            line: false
+            lifetime: 62
+            length: -30
+            baseLength: 30
+            colorTo: FFFFFF
+            colorFrom: FF905E
+            lightScl: 10
+            lightOpacity: 1.8
+            startDelay: 0
+            rotWithParent: true
+            }
+            {
+            type: ParticleEffect
+            particles: 10
+            sizeFrom: 1
+            sizeTo: 2
+            line: false
+            lifetime: 52
+            length: -39
+            baseLength: 40
+            colorTo: FFFFFF
+            colorFrom: FF9949
+            lightScl: 10
+            lightOpacity: 1.8
+            startDelay: 10
+            rotWithParent: true
+            }
+            {
+            type: ParticleEffect
+            particles: 10
+            sizeFrom: 0.5
+            sizeTo: 2
+            line: false
+            lifetime: 42
+            length: -48
+            baseLength: 50
+            colorTo: FFFFFF
+            colorFrom: FFC86E
+            lightScl: 10
+            lightOpacity: 1.8
+            startDelay: 20
+            rotWithParent: true
+            }
+            {
+            type: ParticleEffect
+            particles: 10
+            sizeFrom: 1
+            sizeTo: 2
+            line: false
+            lifetime: 32
+            length: -57
+            baseLength: 60
+            colorTo: FFFFFF
+            colorFrom: FF9949
+            lightScl: 10
+            lightOpacity: 1.8
+            startDelay: 30
+            rotWithParent: true
+            }
+            {
+            type: ParticleEffect
+            particles: 10
+            sizeFrom: 1
+            sizeTo: 2
+            line: false
+            lifetime: 22
+            length: -66
+            baseLength: 70
+            colorTo: FFFFFF
+            colorFrom: FFFFFF
+            lightScl: 10
+            lightOpacity: 1.8
+            startDelay: 40
+            rotWithParent: true
+            }
+            {
+            type: ParticleEffect
+            particles: 10
+            sizeFrom: 0
+            sizeTo: 2
+            line: false
+            lifetime: 12
+            length: -76
+            baseLength: 80
+            colorTo: FFFFFF
+            colorFrom: FFC86E
+            lightScl: 10
+            lightOpacity: 1.8
+            startDelay: 50
+            rotWithParent: true
+            }
+            {
+            type: ParticleEffect
+            particles: 10
+            sizeFrom: 0
+            sizeTo: 1
+            line: false
+            lifetime: 2
+            length: -86
+            baseLength: 90
+            colorTo: FFFFFF
+            colorFrom: FF9949
+            lightScl: 10
+            lightOpacity: 1.8
+            startDelay: 60
+            rotWithParent: true
+            }
+            {
+            type: WaveEffect
+            sizeFrom: 6
+            sizeTo: 10
+            lifetime: 62
+            strokeFrom: 2
+            strokeTo: 0
+            colorTo: FFFFFF
+            colorFrom: FF994900
+        }
+    ]
+}
+        hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 7
+            sizeFrom: 2
+            sizeTo: 0
+            line: false
+            lifetime: 15
+            length: 15
+            baseLength: 3
+            colorTo: FFFFFF00
+            colorFrom: FF905E
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 10
+            lifetime: 20
+            strokeFrom: 4
+            strokeTo: 0
+            colorTo: FFFFFF00
+            colorFrom: FF905E
+            }
+        ]
+    }
+            despawnEffect: none
+        shootEffect: {
+        type: MultiEffect
+            effects: [
+            {
+            type: ParticleEffect
+            lifetime: 10
+            particles: 3
+            colorFrom:FF905E
+            colorTo: FFFFFF
+            line: true
+            length: 240
+            lenFrom: 0
+            lenTo: 3
+            sizeFrom: 2.5
+            sizeTo: 0
+            strokeFrom: 5
+            strokeTo: 0
+            cone: 3
+            }
+        ]
+    }
+        smokeEffect: none
+    }
+    blast-compound:{
+            type: BasicBulletType
+            lifetime: 20
+            damage: 22
+            splashDamage: 17
+            splashDamageRadius: 30
+            speed: 12
+            width: 20
+            height: 20
+            drawSize: 0.3
+            sprite: large-bomb
+            spin: 100
+            shrinkX: 0
+            shrinkY: 0
+            frontColor: FFFFFF
+            backColor: FF7267
+            ammoMultiplier: 1
+            trailColor: FF7267
+            trailWidth: 9
+            trailLength: 30
+            buildingDamageMultiplier: 0.5
+            inaccuracy: 0
+            makeFire: true
+            drag: 0.03
+            despawnHit: true
+            chargeEffect: {
+            type:MultiEffect
+            effects: [
+            {
+            type: ParticleEffect
+            particles: 30
+            sizeFrom: 0
+            sizeTo: 2
+            line: false
+            lifetime: 62
+            length: -30
+            baseLength: 30
+            colorTo: FFFFFF
+            colorFrom: FF7267
+            lightScl: 10
+            lightOpacity: 1.8
+            startDelay: 0
+            rotWithParent: true
+            }
+            {
+            type: ParticleEffect
+            particles: 30
+            sizeFrom: 1
+            sizeTo: 2
+            line: false
+            lifetime: 52
+            length: -39
+            baseLength: 40
+            colorTo: FFFFFF
+            colorFrom: FF332A
+            lightScl: 10
+            lightOpacity: 1.8
+            startDelay: 10
+            rotWithParent: true
+            }
+            {
+            type: ParticleEffect
+            particles: 30
+            sizeFrom: 0.5
+            sizeTo: 2
+            line: false
+            lifetime: 42
+            length: -48
+            baseLength: 50
+            colorTo: FFFFFF
+            colorFrom: FF968E
+            lightScl: 10
+            lightOpacity: 1.8
+            startDelay: 20
+            rotWithParent: true
+            }
+            {
+            type: ParticleEffect
+            particles: 10
+            sizeFrom: 1
+            sizeTo: 2
+            line: false
+            lifetime: 32
+            length: -57
+            baseLength: 60
+            colorTo: FFFFFF
+            colorFrom: FF7267
+            lightScl: 10
+            lightOpacity: 1.8
+            startDelay: 30
+            rotWithParent: true
+            }
+            {
+            type: ParticleEffect
+            particles: 10
+            sizeFrom: 1
+            sizeTo: 2
+            line: false
+            lifetime: 22
+            length: -66
+            baseLength: 70
+            colorTo: FFFFFF
+            colorFrom: FFFFFF
+            lightScl: 10
+            lightOpacity: 1.8
+            startDelay: 40
+            rotWithParent: true
+            }
+            {
+            type: ParticleEffect
+            particles: 10
+            sizeFrom: 0
+            sizeTo: 2
+            line: false
+            lifetime: 12
+            length: -76
+            baseLength: 80
+            colorTo: FFFFFF
+            colorFrom: FF968E
+            lightScl: 10
+            lightOpacity: 1.8
+            startDelay: 50
+            rotWithParent: true
+            }
+            {
+            type: ParticleEffect
+            particles: 10
+            sizeFrom: 0
+            sizeTo: 1
+            line: false
+            lifetime: 2
+            length: -86
+            baseLength: 90
+            colorTo: FFFFFF
+            colorFrom: FF7267
+            lightScl: 10
+            lightOpacity: 1.8
+            startDelay: 60
+            rotWithParent: true
+            }
+            {
+            type: WaveEffect
+            sizeFrom: 6
+            sizeTo: 10
+            lifetime: 62
+            strokeFrom: 2
+            strokeTo: 0
+            colorTo: FFFFFF
+            colorFrom: FF968E00
+        }
+    ]
+}
+        hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 7
+            sizeFrom: 2
+            sizeTo: 0
+            line: true
+            lifetime: 15
+            length: 15
+            baseLength: 3
+            colorTo: FFFFFF00
+            colorFrom: FF968E
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 8
+            lifetime: 20
+            strokeFrom: 4
+            strokeTo: 0
+            colorTo: FFFFFF00
+            colorFrom: FF7267
+            }
+        ]
+    }
+            despawnEffect: none
+        shootEffect: {
+        type: MultiEffect
+            effects: [
+            {
+            type: ParticleEffect
+            lifetime: 10
+            particles: 3
+            colorFrom:FF7267
+            colorTo: FFFFFF
+            line: true
+            length: 240
+            lenFrom: 0
+            lenTo: 3
+            sizeFrom: 2.5
+            sizeTo: 0
+            strokeFrom: 5
+            strokeTo: 0
+            cone: 3
+            }
+        ]
+    }
+        smokeEffect: none
+    }
+}
+
+shoot: {
+    type: ShootHelix
+    shots: 150
+    shotDelay: 0.5
+    firstShotDelay: 60
+    scl: 1
+    mag: 2
+    }
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+      x: 8
+      y: 0
+      type: RegionPart
+      suffix: -side
+      mirror: true
+      under: true
+      outline: true
+      progress: warmup
+      moveX: 2
+      moveY: 2
+      moveRot: -35
+        moves: [
+        {
+        progress: recoil
+        x:0.5
+        y:-0.5
+        rot: -10
+        }
+    ]
+    }
+    {
+    type: RegionPart
+      suffix: -mid-3
+      mirror: false
+      under: false
+      outline: true
+      progress: warmup
+      moveX: 0
+      moveY: -8
+    }
+    {
+    type: RegionPart
+      suffix: -mid-2
+      mirror: false
+      under: false
+      outline: false
+      progress: warmup
+      moveX: 0
+      moveY: -6
+    }
+    {
+    type: RegionPart
+      suffix: -mid-1
+      mirror: false
+      under: false
+      outline: false
+      progress: warmup
+      moveX: 0
+      moveY: -3
+    }
+    ]
+}
+
+requirements: [
+surge-alloy/150
+silicon/322
+titanium/225
+thorium/157
+plastanium/210
+]
+category: turret
+research: ripple
