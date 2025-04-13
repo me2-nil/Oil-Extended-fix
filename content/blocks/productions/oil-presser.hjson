@@ -1,0 +1,46 @@
+type: GenericCrafter
+name: Oil Presser
+description: Convert Oil Into Coal Without Using Power But Slow Production
+health: 520
+size: 3
+hasLiquids: true
+liquidCapacity: 100
+hasItems: true
+itemCapacity: 30
+craftTime: 150
+
+researchCostMultiplier: 0.2
+requirements: [
+  lead/182
+  copper/233
+]
+consumes:{
+    liquids: {
+        liquids: [
+        oil/0.4
+        ]
+    }
+}
+outputItems: [
+coal/2
+]
+category: crafting
+research: copper-liquid-tank
+idleSound: respawning
+idleSoundVolume: 0.5
+update: true
+
+drawer: {
+    type: drawMulti
+    drawers: [
+    {
+    type: drawDefault
+    }
+    {
+    type:drawRegion
+    suffix: "-rotate"
+    spinSprite: true
+    rotateSpeed: 1.6
+    }
+    ]
+}

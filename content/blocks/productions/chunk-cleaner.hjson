@@ -1,0 +1,74 @@
+type: Separator
+name: Chunk Cleaner
+description: Clean Mud And Dirt Out And Get Resource From Them You Can Get Copper/Lead/Scrap
+health: 820
+size: 4
+hasPower: true
+hasLiquids: true
+liquidCapacity: 50
+itemCapacity: 30
+hasItems: true
+craftTime: 30
+
+researchCostMultiplier: 0.2
+requirements: [
+  copper/122
+  lead/86
+  graphite/122
+]
+consumes:{
+    power: 3
+    liquids: {
+        liquids: [
+        water/0.4
+        ]
+    }
+    items: {
+        items: [
+        ore-chunk/1
+        ]
+    }
+}
+results: [
+copper/6
+lead/3
+titanium/1
+scrap/9
+]
+category: crafting
+research: Separator
+idleSound: respawning
+idleSoundVolume: 0.5
+update: true
+
+drawer: {
+    type: drawMulti
+    drawers: [
+    {
+    type: drawDefault
+    }
+    {
+    type: drawLiquidRegion
+    suffix: "-liquid"
+    drawLiquid: water
+    }
+    {
+    type: drawBubbles
+    color: 008CFF50
+    }
+    {
+    type: drawRegion
+    suffix: "-rotate"
+    spinSprite: true
+    rotateSpeed: 1
+    }
+    {
+    type: drawRegion
+    suffix: "-rotate"
+    spinSprite: true
+    rotateSpeed: -1
+    }
+    ]
+}
+undateEffectChance: 0
+updateEffect: none
