@@ -131,10 +131,11 @@ shoot: {
     }
 
 requirements: [
-titanium/50
-silicon/35
-stranth/120
-graphite/50
+titanium/3200
+silicon/1800
+stranth/1500
+graphite/500
+plastanium/800
 ]
 category: turret
 research: tsunami
