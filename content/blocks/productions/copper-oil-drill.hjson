@@ -20,9 +20,9 @@ consumes: {
     }
 }
 requirements: [
-  copper/80
-  graphite/50
-  lead/50
+  copper/70
+  graphite/28
+  lead/40
 ]
 category: production
 research: mechanical-drill
