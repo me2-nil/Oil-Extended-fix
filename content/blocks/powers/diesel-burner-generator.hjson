@@ -1,5 +1,5 @@
 type: consumeGenerator
-name: Oil Generator
+name: Diesel Generator
 description: Burning Diesel To Power
 health: 1200
 size: 4
