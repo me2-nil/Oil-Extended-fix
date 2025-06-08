@@ -205,7 +205,7 @@ smokeEffect: {
         collidesAir: false
         frontColor: FFD7FF
         backColor: E876FF
-        lifetime: 9
+        lifetime: 10
         knockback: 3
         pierce: false
         ammoMultiplier: 5
@@ -279,9 +279,9 @@ shoot: {
     }
 
 requirements: [
-copper/50
+copper/80
 lead/50
-graphite/24
+graphite/32
 ]
 category: turret
 research: hail
