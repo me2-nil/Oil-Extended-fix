@@ -20,7 +20,7 @@ hasLiquid: true
 hasItem: true
 shootSound: laser
 consumes: {
-    power: 12.5
+    power: 10.5
     coolant: {
     amount: 0.1
     optional: true
