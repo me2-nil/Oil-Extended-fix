@@ -18,7 +18,7 @@ liquidBoostIntensity: 1.9
 consumes: {
     liquid:{
     liquid: oil
-    amount: 0.12
+    amount: 0.0416666666667
     booster: false
     optional: true
     }
