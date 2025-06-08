@@ -15,7 +15,7 @@ researchCostMultiplier: 0.2
 consumes: {
     liquids: {
         liquids: [
-        water/0.01
+        water/0.1
         ]
     }
 }
