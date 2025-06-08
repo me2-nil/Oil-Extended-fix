@@ -28,7 +28,7 @@ ammoTypes: {
         copper: {
         type: BasicBulletType
         damage: 0
-        splashDamage: 42
+        splashDamage: 21
         splashDamageRadius: 15
         speed: 8
         width: 10
@@ -110,7 +110,7 @@ smokeEffect: {
         silicon: {
         type: BasicBulletType
         damage: 0
-        splashDamage: 30
+        splashDamage: 27
         splashDamageRadius: 15
         speed: 8
         width: 10
@@ -196,7 +196,7 @@ smokeEffect: {
         thorium: {
         type: BasicBulletType
         damage: 0
-        splashDamage: 50
+        splashDamage: 37
         splashDamageRadius: 30
         speed: 16
         width: 10
