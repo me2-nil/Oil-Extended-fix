@@ -1,0 +1,77 @@
+type: missile
+hidden: true
+targetAir: true
+targetGround: true
+speed: 6
+accel: 0.2
+missileAccelTime: 0.5
+flying: true
+rotateSpeed: 6
+controller: MissileAI
+maxRange: 220
+lifetime: 130
+engineColor: 9AFF7E90
+engineSize: 3
+engineOffset: 3
+health: 50
+useUnitsCap: false
+isEnemy: false
+lowAltitude: true
+physics: false
+hittable: false
+playerControllable: false
+targetable: false
+loopSoundVolume: 0.3
+homingDelay: 0
+trailColor: 9AFF7E90
+trailLength: 8
+bounded: false
+useUnitCap: false
+createWreck: false
+deathExplosionEffect: none
+  weapons: [
+  {
+    shootCone: 360
+    mirror: false
+    reload: 9999
+    shootOnDeath: true
+    bullet: {
+      damage:50
+      splashDamage:50
+      splashDamageRadius: 45
+      type: ExplosionBulletType
+      collidesAir: true
+      collidesGround: true
+      instantDisappear: true
+      hitSound: ex
+      hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 14
+            sizeFrom: 1
+            sizeTo: 0
+            line: true
+            lifetime: 30
+            length: 80
+            baseLength: 3
+            colorTo: FFFFFF00
+            colorFrom: 9AFF7E
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 60
+            lifetime: 25
+            strokeFrom: 4
+            strokeTo: 0
+            colorTo: FFFFFF00
+            colorFrom: 9AFF7E
+            }
+        ]
+    }
+        shootEffect: none
+    }
+  }
+]
