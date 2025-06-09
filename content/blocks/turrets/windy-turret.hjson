@@ -1,0 +1,160 @@
+type: PowerTurret
+name: Windy
+description:Blow Air Units Away. Do a little damage
+health: 600
+size: 2
+targetGround: false
+targetAir: true
+reload: 120
+range: 140
+shootCone: 80
+rotateSpeed: 4
+recoil: 1.2
+researchCostMultiplier: 0.2
+liquidCapacity: 20
+coolantMultiplier: 2
+consumes: {
+    power: 4
+    coolant: {
+    amount: 0.5
+    optional: true
+    }
+}
+hasLiquid: true
+hasItem: true
+shootSound: none
+shootY: 8
+shootType: {
+        type:BulletType
+        lifetime: 16
+        speed: 10
+        damage: 2
+        hittable: false
+        absorbable: false
+        collidesGround: false
+        knockback: 0.5
+        impact: true
+        inaccuracy: 22
+        despawnEffect: none
+        hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 6
+            sizeFrom: 3
+            sizeTo: 0
+            lifetime: 40
+            length: 7
+            baseLength: 10
+            interpSize: pow2In
+            interp: pow10Out
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF20
+        }
+        {
+            type: ParticleEffect
+            particles: 6
+            sizeFrom: 2
+            sizeTo: 0
+            lifetime: 15
+            length: 5
+            baseLength: 10
+            interpSize: pow2In
+            interp: pow10Out
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF10
+            
+            }
+        ]
+    }
+    shootEffect: {
+    type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            cone: 21
+            particles: 1
+            lifetime: 60
+            length: 170
+            interpSize: pow2In
+            interp: pow2Out
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF10
+            sizeFrom: 0.5
+            sizeTo: 9
+        }
+        {
+            type: ParticleEffect
+            cone: 18
+            particles: 3
+            lifetime: 50
+            length: 180
+            interpSize: pow2In
+            interp: pow2Out
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF10
+            sizeFrom: 0.8
+            sizeTo: 10
+        }
+    ]
+}
+
+    smokeEffect: {
+    type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            cone: 18
+            particles: 2
+            lifetime: 50
+            length: 200
+            interpSize: pow2In
+            interp: pow2Out
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF10
+            sizeFrom: 2
+            sizeTo: 9
+        }
+        {
+            type: ParticleEffect
+            cone: 10
+            particles: 1
+            lifetime: 30
+            length: 210
+            interpSize: pow2In
+            interp: pow2Out
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF10
+            sizeFrom: 1
+            sizeTo: 8
+        }
+        {
+            type: ParticleEffect
+            cone: 22
+            particles: 2
+            lifetime: 90
+            length: 210
+            interpSize: pow2In
+            interp: pow10Out
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF10
+            sizeFrom: 1
+            sizeTo: 7
+        }
+    ]
+}
+}
+shoot: {
+    shots: 100
+    shotDelay: 0.5
+    firstShotsDelay: 120
+}
+requirements: [
+titanium/90
+silicon/120
+lead/200
+graphite/90
+]
+category: turret
+research: scatter

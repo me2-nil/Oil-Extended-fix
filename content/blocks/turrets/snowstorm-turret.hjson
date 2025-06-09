@@ -1,0 +1,148 @@
+type: PowerTurret
+name: Snow Storm
+description: Sprays enemy units with below zero temperatures, deals low damage but immensely slows them. Has a chance to freeze units in place --Design By Javan--
+health: 920
+size: 2
+targetGround: true
+targetAir: true
+reload: 5
+range: 128
+shootCone: 80
+rotateSpeed: 4.5
+recoil: 0.5
+researchCostMultiplier: 0.2
+liquidCapacity: 30
+consumes: {
+    power: 5
+    liquids: {
+        liquids: [
+        cryofluid/0.1
+        ]
+    }
+}
+hasLiquid: true
+hasItem: true
+shootSound: flame
+shootY: 12
+maxAmmo: 20
+
+shootType: {
+        type:BulletType
+        lifetime: 7
+        speed: 20
+        damage: 4
+        hittable: false
+        absorbable: false
+        pierce: true
+        pierceBuilding: true
+        status: freezing
+        statusDuration: 60
+        inaccuracy: 7
+        despawnEffect: none
+        hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 3
+            sizeFrom: 3
+            sizeTo: 0
+            lifetime: 40
+            length: 7
+            baseLength: 8
+            colorTo: FFFFFF00
+            colorFrom: ACFFFF60
+        }
+        {
+            type: ParticleEffect
+            particles: 3
+            sizeFrom: 2
+            sizeTo: 0
+            lifetime: 15
+            length: 5
+            baseLength: 8
+            colorTo: 00FFFE00
+            colorFrom: FFFFFF50
+            
+            }
+        ]
+    }
+    shootEffect: {
+    type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            cone: 4
+            particles: 3
+            lifetime: 30
+            length: 150
+            colorTo: 86CEFF
+            colorFrom: FFFFFF50
+            sizeFrom: 2
+            sizeTo: 0.2
+        }
+        {
+            type: ParticleEffect
+            cone: 4
+            particles: 2
+            lifetime: 25
+            length: 140
+            colorTo: 8FFFFC50
+            colorFrom: 86CEFF
+            sizeFrom: 4
+            sizeTo: 0.2
+        }
+    ]
+}
+
+    smokeEffect: {
+    type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            cone: 4
+            particles: 3
+            lifetime: 35
+            length: 160
+            colorTo: ACFFFF00
+            colorFrom: FFFFFF
+            sizeFrom: 5
+            sizeTo: 0.2
+        }
+        {
+            type: ParticleEffect
+            cone: 4
+            particles: 2
+            lifetime: 15
+            length: 150
+            colorFrom: FFFFFF
+            colorTo: FFFFFF00
+            sizeFrom: 4
+            sizeTo: 0.2
+        }
+        {
+            type: ParticleEffect
+            cone: 4
+            particles: 2
+            lifetime: 400
+            length: 160
+            interp: pow10Out
+            colorFrom: FFFFFF
+            colorTo: FFFFFF
+            sizeFrom: 1
+            sizeTo: 0.1
+        }
+    ]
+}
+}
+shoot: {
+    shots: 5
+    }
+
+requirements: [
+titanium/110
+silicon/83
+stranth/100
+]
+category: turret
+research: tsunami

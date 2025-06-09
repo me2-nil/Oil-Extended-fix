@@ -1,49 +1,60 @@
 type: ItemTurret
 name: Eagle
-description: Early Sniper Turret Perfect For Far Enemies
-health: 200
-size: 1
-targetGround: true
+description:Charge Homing Eagle Missile.Long Range But Long Time Reload.(It is like an eagle flying out of its nest to hunting, with great strength and speed.)
+health: 820
+size: 2
+targetGround: false
 targetAir: true
-reload: 70
-range: 200
+reload: 320
+range: 500
 rotateSpeed: 6.4
 inaccuracy: 1
-recoil: 1
+recoil: 0.5
+recoilTime: 120
+cooldownTime: 180
+shootCone: 45
 researchCostMultiplier: 0.2
 liquidCapacity: 20
 moveWhileCharging: false
+hasPower: true
 hasLiquid: true
 hasItem: true
-shootSound: pew
+shootSound: laser
 consumes: {
+    power: 2
     coolant: {
     amount: 0.1
     optional: true
     }
 }
 shootY: 4
-maxAmmo: 30
-ammoPerShot: 10
 ammoTypes: {
-            stranth: {
+            silicon:{
             type: BasicBulletType
-            lifetime: 22
-            damage: 18
-            speed: 12
-            width:10
-            height: 10
-            bulletShrink: 0.1
+            lifetime: 240
+            damage: 80
+            speed: 2
+            width: 13
+            height: 13
+            sprite: oe-eagle-bullet
+            drawSize: 20
+            shrinkX: -2
+            shrinkY: -0.7
             frontColor: FFFFFF
             backColor: FFFFFF
-            ammoMultiplier: 1
-            buildingDamageMultiplier: 0.8
-            trailColor: FFFFFF
-            trailWidth: 2
-            trailLength: 2
-            pierceCap: 3
+            trailColor: FFFFFF80
+            trailWidth: 4
+            trailLength: 8
+            knockback: 3
+            impact: true
+            drag: -0.01
+            hitSound: explosion
             pierce: true
-            pierceBuilding: true
+            pierceCap: 3
+            homingRange: 9999
+            homingPower: 0.05
+            homingDelay: 5
+            collidesGround: false
             despawnHit: true
             chargeEffect: {
             type:MultiEffect
@@ -51,20 +62,20 @@ ammoTypes: {
             {
             type: ParticleEffect
             particles: 10
-            sizeFrom: 0
-            sizeTo: 2
+            sizeFrom: 1
+            sizeTo: 4
             line: false
-            lifetime: 29
-            length: -10
-            baseLength: 10
+            lifetime: 19
+            length: 0
+            baseLength: 0
             colorTo: FFFFFF
             colorFrom: FFFFFF00
         }
         {
             type: WaveEffect
-            sizeFrom: 11
-            sizeTo: 0
-            lifetime: 29
+            sizeFrom: 6
+            sizeTo: 5
+            lifetime: 19
             strokeFrom: 2
             strokeTo: 0
             colorTo: FFFFFF
@@ -74,37 +85,38 @@ ammoTypes: {
 }
         hitEffect: {
             type: ParticleEffect
-            particles: 3
+            particles: 6
             sizeFrom: 2
             sizeTo: 0
-            line: false
-            lifetime: 30
-            length: 2
+            line: true
+            lifetime: 15
+            length: 30
             baseLength: 5
             colorTo: FFFFFF
-            colorFrom: FFFFFF00
+            colorFrom: FFFFFF
+            cone: 80
         }
             despawnEffect: {
         type: MultiEffect
         effects: [
         {
             type: ParticleEffect
-            particles: 7
-            sizeFrom: 2
+            particles: 15
+            sizeFrom: 3
             sizeTo: 0
             line: false
-            lifetime: 15
-            length: 5
-            baseLength: 3
-            colorTo: FFFFFF00
+            lifetime: 10
+            length: 50
+            baseLength: 10
+            colorTo: FFFFFF
             colorFrom: FFFFFF
         }
         {
             type: WaveEffect
             sizeFrom: 0
-            sizeTo: 10
-            lifetime: 20
-            strokeFrom: 4
+            sizeTo: 60
+            lifetime: 10
+            strokeFrom: 8
             strokeTo: 0
             colorTo: FFFFFF00
             colorFrom: FFFFFF
@@ -121,28 +133,465 @@ ammoTypes: {
             colorFrom:FFFFFF
             colorTo: FFFFFF00
             line: true
-            length: 15
+            length: 50
             lenFrom: 0
             lenTo: 3
             sizeFrom: 2.5
             sizeTo: 0
             strokeFrom: 5
             strokeTo: 0
-            cone: 20
+            cone: 70
             }
         ]
     }
         smokeEffect: none
+    }
+    plastanium:{
+            type: BasicBulletType
+            lifetime: 240
+            damage: 65
+            speed: 5
+            width: 13
+            height: 13
+            sprite: oe-eagle-bullet
+            drawSize: 20
+            shrinkX: -2
+            shrinkY: -0.7
+            frontColor: ECFF79
+            backColor: ECFF79
+            trailColor: ECFF7980
+            trailWidth: 4
+            trailLength: 8
+            knockback: 3
+            impact: true
+            drag: 0
+            hitSound: explosion
+            pierce: true
+            pierceCap: 5
+            homingRange: 9999
+            homingPower: 0.075
+            homingDelay: 5
+            collidesGround: false
+            despawnHit: true
+            chargeEffect: {
+            type:MultiEffect
+            effects: [
+            {
+            type: ParticleEffect
+            particles: 10
+            sizeFrom: 1
+            sizeTo: 4
+            line: false
+            lifetime: 19
+            length: 0
+            baseLength: 0
+            colorTo: ECFF79
+            colorFrom: FFFFFF00
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 6
+            sizeTo: 5
+            lifetime: 19
+            strokeFrom: 2
+            strokeTo: 0
+            colorTo: FFFFFF
+            colorFrom: ECFF7900
+        }
+    ]
 }
+        hitEffect: {
+            type: ParticleEffect
+            particles: 6
+            sizeFrom: 2
+            sizeTo: 0
+            line: true
+            lifetime: 15
+            length: 30
+            baseLength: 5
+            colorTo: FFFFFF
+            colorFrom: ECFF79
+            cone: 80
+        }
+            despawnEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 15
+            sizeFrom: 3
+            sizeTo: 0
+            line: false
+            lifetime: 10
+            length: 50
+            baseLength: 10
+            colorTo: FFFFFF
+            colorFrom: ECFF79
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 60
+            lifetime: 10
+            strokeFrom: 8
+            strokeTo: 0
+            colorTo: FFFFFF00
+            colorFrom: ECFF79
+            }
+        ]
+    }
+        shootEffect: {
+        type: MultiEffect
+            effects: [
+            {
+            type: ParticleEffect
+            lifetime: 10
+            particles: 12
+            colorFrom:ECFF79
+            colorTo: FFFFFF00
+            line: true
+            length: 50
+            lenFrom: 0
+            lenTo: 3
+            sizeFrom: 2.5
+            sizeTo: 0
+            strokeFrom: 5
+            strokeTo: 0
+            cone: 70
+            }
+        ]
+    }
+        smokeEffect: none
+    }
+    terlicon:{
+            type: BasicBulletType
+            lifetime: 240
+            damage: 35
+            speed: 6
+            width: 13
+            height: 13
+            sprite: oe-eagle-bullet
+            drawSize: 20
+            shrinkX: -2
+            shrinkY: -0.7
+            frontColor: FEBCFF
+            backColor: FEBCFF
+            trailColor: FEBCFF80
+            trailWidth: 4
+            trailLength: 8
+            knockback: 7
+            impact: true
+            drag: 0
+            hitSound: explosion
+            pierce: true
+            pierceCap: 10
+            homingRange: 400
+            homingPower: 1
+            homingDelay: 5
+            collidesGround: false
+            despawnHit: true
+            chargeEffect: {
+            type:MultiEffect
+            effects: [
+            {
+            type: ParticleEffect
+            particles: 10
+            sizeFrom: 1
+            sizeTo: 4
+            line: false
+            lifetime: 19
+            length: 0
+            baseLength: 0
+            colorTo: FEBCFF
+            colorFrom: FFFFFF00
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 6
+            sizeTo: 5
+            lifetime: 19
+            strokeFrom: 2
+            strokeTo: 0
+            colorTo: FFFFFF
+            colorFrom: FEBCFF00
+        }
+    ]
+}
+        hitEffect: {
+            type: ParticleEffect
+            particles: 6
+            sizeFrom: 2
+            sizeTo: 0
+            line: true
+            lifetime: 15
+            length: 30
+            baseLength: 5
+            colorTo: FFFFFF
+            colorFrom: FEBCFF
+            cone: 80
+        }
+            despawnEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 15
+            sizeFrom: 3
+            sizeTo: 0
+            line: false
+            lifetime: 10
+            length: 50
+            baseLength: 10
+            colorTo: FFFFFF
+            colorFrom: FEBCFF
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 60
+            lifetime: 10
+            strokeFrom: 8
+            strokeTo: 0
+            colorTo: FFFFFF00
+            colorFrom: FEBCFF
+            }
+        ]
+    }
+        shootEffect: {
+        type: MultiEffect
+            effects: [
+            {
+            type: ParticleEffect
+            lifetime: 10
+            particles: 12
+            colorFrom:FEBCFF
+            colorTo: FFFFFF00
+            line: true
+            length: 50
+            lenFrom: 0
+            lenTo: 3
+            sizeFrom: 2.5
+            sizeTo: 0
+            strokeFrom: 5
+            strokeTo: 0
+            cone: 70
+            }
+        ]
+    }
+        smokeEffect: none
+    }
 }
 shoot: {
     shots: 1
-    firstShotDelay: 30
+    firstShotDelay: 20
     }
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+    type: RegionPart
+    x: 3
+    y: 1
+    suffix: -wing
+    mirror: true
+    under: true
+    outline: true
+    moves: [
+        {
+        rot: 40
+        x: -3
+        y: 1
+        progress: {
+                type: recoil
+                ops: [
+                    {
+                        op: compress
+                        start: 0
+                        end: 0.25
+                    }
+                    {
+                        op: curve
+                        interp: pow5In
+                    }
+                ]
+            }
+        }
+        {
+    x: 5
+    y: -0.5
+    rot: -35
+    progress: {
+                type: warmup
+                ops: [
+                    {
+                        op: compress
+                        start: 0
+                        end: 0.25
+                    }
+                    {
+                        op: curve
+                        interp: pow5In
+                    }
+                ]
+            }
+    }
+    ]
+    }
+    {
+    type: RegionPart
+    x: 4
+    y: -2
+    suffix: -wing
+    mirror: true
+    under: true
+    outline: true
+    moves: [
+        {
+        rot: 40
+        x: -3
+        y: 1
+        progress: {
+                type: recoil
+                ops: [
+                    {
+                        op: compress
+                        start: 0.25
+                        end: 0.5
+                    }
+                    {
+                        op: curve
+                        interp: pow5In
+                    }
+                ]
+            }
+        }
+        {
+        x: 3
+        y: -0.5
+        rot: -55
+        progress: {
+                type: warmup
+                ops: [
+                    {
+                        op: compress
+                        start: 0.25
+                        end: 0.5
+                    }
+                    {
+                        op: curve
+                        interp: pow5In
+                    }
+                ]
+            }
+    }
+    ]
+    }
+    {
+    type: RegionPart
+    x: 2
+    y: -5
+    suffix: -wing
+    mirror: true
+    under: true
+    outline: true
+    moves: [
+        {
+        rot: 40
+        x: -3
+        y: 1
+        progress: {
+                type: recoil
+                ops: [
+                    {
+                        op: compress
+                        start: 0.5
+                        end: 0.75
+                    }
+                    {
+                        op: curve
+                        interp: pow5In
+                    }
+                ]
+            }
+        }
+    {
+    x: 4
+    y: -0.5
+    rot: -95
+    progress: {
+                type: warmup
+                ops: [
+                    {
+                        op: compress
+                        start: 0.5
+                        end: 0.75
+                    }
+                    {
+                        op: curve
+                        interp: pow5In
+                    }
+                ]
+            }
+    }
+    ]
+    }
+    {
+    type: RegionPart
+    x: 0
+    y: -4
+    suffix: -wing
+    mirror: true
+    under: true
+    outline: true
+    moves: [
+        {
+        rot: 40
+        x: -3
+        y: 1
+        progress: {
+                type: recoil
+                ops: [
+                    {
+                        op: compress
+                        start: 0.75
+                        end: 0.9
+                    }
+                    {
+                        op: curve
+                        interp: pow5In
+                    }
+                ]
+            }
+        }
+        {
+        x: 5
+        y: -3.5
+        rot: -125
+        progress: {
+                type: warmup
+                ops: [
+                    {
+                        op: compress
+                        start: 0.75
+                        end: 0.9
+                    }
+                    {
+                        op: curve
+                        interp: pow5In
+                    }
+                ]
+            }
+        }
+        ]
+        }
+]
+}
 
 requirements: [
-stranth/50
-lead/50
+stranth/120
+terlicon/52
+lead/65
+titanium/82
 ]
 category: turret
-research: duo
+research: scatter

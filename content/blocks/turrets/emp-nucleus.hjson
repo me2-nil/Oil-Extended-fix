@@ -1,0 +1,205 @@
+type:PowerTurret
+name:EMP Nucleus
+description: Clear all weak units Enemies. Stuns and deals small shock damage continuously for 30 sec. (Very Long Reload Time And Consumes Alot Of Power But Do Big Area Damage)
+health: 2200
+size: 6
+inaccuracy: 360
+targetGround: true
+targetAir: true
+reload: 3000
+range: 300
+shootCone: 360
+rotateSpeed: 0
+recoil: 0
+researchCostMultiplier: 0.2
+consumes: {
+power: 75
+}
+hasPower: true
+hasLiquid: false
+hasItem: false
+# activeSound: none
+shootSound: pulse
+
+drawer: {
+    type: DrawTurret
+    basePrefix: nucleus-
+    }
+shootY: 0
+shootType:{
+            type: BasicBulletType
+            lifetime: 300
+            damage: 30
+            splashDamage: 200
+            splashDamageRadius: 500
+            speed: 0
+            width: 1
+            height: 1
+            sprite: oe-circle-ball
+            drawSize: 20
+            shrinkX: -20
+            shrinkY: -20
+            frontColor: FFFFFF
+            backColor: 82F1FF
+            buildingDamageMultiplier: 0.01
+            hitSound: pulseBlast
+            hitShake: 30
+            hittable: false
+            knockback: 50
+            impact: true
+            status: EMP
+            statusDuration: 600
+            pierce: true
+            pierceBuilding: true
+            despawnHit: true
+        hitEffect: {
+            type: ParticleEffect
+            particles: 6
+            sizeFrom: 2
+            sizeTo: 0
+            line: false
+            lifetime: 10
+            length: 5
+            baseLength: 5
+            colorTo: 82F1FF
+            colorFrom: FFFFFF
+        }
+            despawnEffect: {
+    type:MultiEffect
+    effects: [
+    {
+    type: WaveEffect
+    sizeFrom: 3
+    sizeTo: 500
+    lifetime: 30
+    strokeFrom: 2
+    strokeTo: 0
+    colorTo: FFFFFF
+    colorFrom: 82F1FF
+    }
+    {
+    type: ParticleEffect
+    particles: 100
+    sizeFrom: 5
+    sizeTo: 25
+    line: false
+    lifetime: 200
+    length: 480
+    baseLength: 5
+    colorTo: FFFFFF00
+    colorFrom: FFFFFF20
+    }
+    {
+    type: ParticleEffect
+    particles: 50
+    sizeFrom: 2
+    sizeTo: 0
+    line: false
+    lifetime: 30
+    length: 500
+    baseLength: 5
+    colorTo: 82F1FF
+    colorFrom: FFFFFF
+        }
+    ]
+}
+        shootEffect: {
+    type:MultiEffect
+    effects: [
+    {
+    type: ParticleEffect
+    sizeFrom: 5
+    sizeTo: 5
+    lifetime: 300
+    length: 0
+    baseLength: 0
+    colorTo: 82F1FF
+    colorFrom: FFFFFF00
+    randLength: false
+    region: oe-4-arrow-point-center
+    spin: 3.6
+    startDelay: 0
+    }
+    {
+    type: ParticleEffect
+    sizeFrom: 10
+    sizeTo: 10
+    lifetime: 270
+    length: 0
+    baseLength: 0
+    colorTo: 82F1FF
+    colorFrom: FFFFFF00
+    randLength: false
+    region: oe-4-arrow-point-center
+    spin: -3.6
+    startDelay: 30
+    }
+    {
+    type: ParticleEffect
+    sizeFrom: 15
+    sizeTo: 15
+    lifetime: 240
+    length: 0
+    baseLength: 0
+    colorTo: 82F1FF
+    colorFrom: FFFFFF00
+    randLength: false
+    region: oe-4-arrow-point-center
+    spin: 3.6
+    startDelay: 60
+    }
+    {
+    type: ParticleEffect
+    sizeFrom: 20
+    sizeTo: 20
+    lifetime: 210
+    length: 0
+    baseLength: 0
+    colorTo: 82F1FF
+    colorFrom: FFFFFF00
+    randLength: false
+    region: oe-4-arrow-point-center
+    spin: -3.6
+    startDelay: 90
+    }
+    {
+    type: ParticleEffect
+    sizeFrom: 25
+    sizeTo: 25
+    lifetime: 180
+    length: 0
+    baseLength: 0
+    colorTo: 82F1FF
+    colorFrom: FFFFFF00
+    randLength: false
+    region: oe-4-arrow-point-center
+    spin: 3.6
+    startDelay: 120
+    }
+    {
+    type: WaveEffect
+    sizeFrom: 500
+    sizeTo: 3
+    lifetime: 300
+    strokeFrom: 2
+    strokeTo: 0
+    colorTo: FFFFFF
+    colorFrom: 82F1FF
+    }
+    ]
+}
+        smokeEffect: none
+}
+shoot: {
+    shots: 1
+}
+
+requirements: [
+silicon/4000
+lead/6000
+copper/6000
+titanium/3200
+stranth/2000
+]
+category: turret
+research: foreshadow

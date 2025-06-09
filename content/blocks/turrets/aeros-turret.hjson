@@ -1,0 +1,639 @@
+type: ItemTurret
+name: Aeros
+description: Fires a large number of bullets with low accuracy, and each type of bullet has different accuracy.
+health: 520
+size: 2
+targetGround: false
+targetAir: true
+reload: 210
+range: 300
+rotateSpeed: 6.4
+recoil: 2
+cooldownTime: 180
+liquidCapacity: 20
+velocityRnd: 0.8
+minVelocity: 0.05
+hasLiquid: true
+hasItem: true
+shootSound: shootBig
+consumes: {
+    coolant: {
+    amount: 0.1
+    optional: true
+    }
+}
+maxAmmo: 40
+ammoPerShot: 20
+shootY: 4
+ammoTypes: {
+    lead:{
+            type: BasicBulletType
+            collidesGround: false
+            lifetime: 60
+            damage: 4
+            splashDamage: 30
+            splashDamageRadius: 20
+            speed: 5
+            width:6
+            height: 6
+            bulletShrink: 0
+            impact: true
+            knockback: 0.3
+            frontColor: FFFFFF
+            backColor: FFB78D
+            ammoMultiplier: 3
+            inaccuracy: 30
+            lifeScaleRandMin: 0.9
+            lifeScaleRandMax: 1.1
+            hitSound: explosion
+            despawnHit: true
+        despawnEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 6
+            sizeFrom: 2
+            sizeTo: 8
+            lifetime: 40
+            length: 7
+            baseLength: 10
+            interpSize: pow2In
+            interp: pow10Out
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF20
+        }
+        {
+            type: ParticleEffect
+            particles: 6
+            sizeFrom: 1
+            sizeTo: 5
+            lifetime: 15
+            length: 5
+            baseLength: 10
+            interpSize: pow2In
+            interp: pow10Out
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF20
+            
+            }
+        {
+            type: ParticleEffect
+            particles: 3
+            sizeFrom: 2
+            sizeTo: 0
+            line: false
+            lifetime: 30
+            length: 2
+            baseLength: 5
+            colorTo: FFFFFF
+            colorFrom: FFB78D00
+        }
+        ]
+        }
+            hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 7
+            sizeFrom: 1
+            sizeTo: 0
+            line: true
+            lifetime: 15
+            length: 20
+            baseLength: 3
+            colorTo: FFFFFF00
+            colorFrom: FFB78D
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 10
+            lifetime: 20
+            strokeFrom: 4
+            strokeTo: 0
+            colorTo: FFFFFF00
+            colorFrom: FFB78D
+            }
+        ]
+    }
+        shootEffect: none
+        smokeEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            cone: 18
+            particles: 1
+            lifetime: 70
+            length: 120
+            interpSize: pow2In
+            interp: pow10Out
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF10
+            sizeFrom: 2
+            sizeTo: 9
+        }
+        {
+            type: ParticleEffect
+            cone: 10
+            particles: 2
+            lifetime: 60
+            length: 120
+            interpSize: pow10In
+            interp: pow10Out
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF10
+            sizeFrom: 1
+            sizeTo: 8
+        }
+        {
+            type: ParticleEffect
+            cone: 22
+            particles: 1
+            lifetime: 90
+            length: 120
+            interpSize: pow2In
+            interp: pow10Out
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF10
+            sizeFrom: 1
+            sizeTo: 7
+        }
+    ]
+}
+}
+    metaglass: {
+            type: BasicBulletType
+            collidesGround: false
+            lifetime: 60
+            damage: 6
+            splashDamage: 22
+            splashDamageRadius: 30
+            speed: 5
+            width:8
+            height: 8
+            bulletShrink: 0
+            impact: true
+            knockback: 0.3
+            frontColor: FFFFFF
+            backColor: FFD9F9
+            ammoMultiplier: 5
+            inaccuracy: 50
+            lifeScaleRandMin: 0.5
+            lifeScaleRandMax: 1
+            despawnHit: true
+            hitSound: explosion
+            fragBullet:{
+                type: BasicBulletType
+                collidesGround: false
+                lifetime: 20
+                damage: 10
+                speed: 5
+                width:1
+                height: 4
+                bulletShrink: 0
+                impact: true
+                knockback: 0.1
+                frontColor: FFFFFF
+                backColor: FFD9F9
+                despawnHit: false
+                hitSound: none
+            hitEffect: none
+            despawnEffect: none
+        }
+        hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 6
+            sizeFrom: 2
+            sizeTo: 8
+            lifetime: 40
+            length: 7
+            baseLength: 10
+            interpSize: pow2In
+            interp: pow10Out
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF20
+        }
+        {
+            type: ParticleEffect
+            particles: 6
+            sizeFrom: 1
+            sizeTo: 5
+            lifetime: 15
+            length: 5
+            baseLength: 10
+            interpSize: pow2In
+            interp: pow10Out
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF20
+            
+            }
+        {
+            type: ParticleEffect
+            particles: 3
+            sizeFrom: 2
+            sizeTo: 0
+            line: false
+            lifetime: 30
+            length: 2
+            baseLength: 5
+            colorTo: FFFFFF
+            colorFrom: FFD9F900
+        }
+        ]
+        }
+            despawnEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 7
+            sizeFrom: 2
+            sizeTo: 0
+            line: true
+            lifetime: 15
+            length: 50
+            baseLength: 3
+            colorTo: FFFFFF00
+            colorFrom: FFD9F9
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 15
+            lifetime: 20
+            strokeFrom: 4
+            strokeTo: 0
+            colorTo: FFFFFF00
+            colorFrom: FFD9F9
+            }
+        ]
+    }
+        shootEffect: none
+        smokeEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            cone: 18
+            particles: 1
+            lifetime: 50
+            length: 120
+            interpSize: pow2In
+            interp: pow10Out
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF10
+            sizeFrom: 2
+            sizeTo: 9
+        }
+        {
+            type: ParticleEffect
+            cone: 10
+            particles: 1
+            lifetime: 30
+            length: 120
+            interpSize: pow2In
+            interp: pow10Out
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF10
+            sizeFrom: 1
+            sizeTo: 8
+        }
+        {
+            type: ParticleEffect
+            cone: 22
+            particles: 1
+            lifetime: 90
+            length: 120
+            interpSize: pow2In
+            interp: pow10Out
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF10
+            sizeFrom: 1
+            sizeTo: 7
+        }
+    ]
+}
+}
+    plastanium:{
+            type: BasicBulletType
+            collidesGround: false
+            lifetime: 120
+            damage: 12
+            drag: 0.009
+            splashDamage: 44
+            splashDamageRadius: 30
+            speed: 10
+            width:6
+            height: 6
+            sticky: true
+            stickyExtraLifetime: 60
+            bulletShrink: 0
+            impact: true
+            knockback: 0
+            frontColor: FFFFFF
+            backColor: CEFF83
+            ammoMultiplier: 1
+            inaccuracy: 15
+            lifeScaleRandMin: 0.9
+            lifeScaleRandMax: 1.1
+            hitSound: explosion
+            despawnHit: true
+        despawnEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 6
+            sizeFrom: 2
+            sizeTo: 8
+            lifetime: 40
+            length: 7
+            baseLength: 10
+            interpSize: pow2In
+            interp: pow10Out
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF20
+        }
+        {
+            type: ParticleEffect
+            particles: 6
+            sizeFrom: 1
+            sizeTo: 5
+            lifetime: 15
+            length: 5
+            baseLength: 10
+            interpSize: pow2In
+            interp: pow10Out
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF20
+            
+            }
+        {
+            type: ParticleEffect
+            particles: 3
+            sizeFrom: 2
+            sizeTo: 0
+            line: false
+            lifetime: 30
+            length: 2
+            baseLength: 5
+            colorTo: FFFFFF
+            colorFrom: CEFF8300
+        }
+        ]
+        }
+            hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 7
+            sizeFrom: 1
+            sizeTo: 0
+            line: true
+            lifetime: 15
+            length: 20
+            baseLength: 3
+            colorTo: FFFFFF00
+            colorFrom: CEFF83
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 25
+            lifetime: 15
+            strokeFrom: 4
+            strokeTo: 0
+            colorTo: FFFFFF00
+            colorFrom: CEFF83
+            }
+        ]
+    }
+        shootEffect: none
+        smokeEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            cone: 18
+            particles: 1
+            lifetime: 70
+            length: 120
+            interpSize: pow2In
+            interp: pow10Out
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF10
+            sizeFrom: 2
+            sizeTo: 9
+        }
+        {
+            type: ParticleEffect
+            cone: 10
+            particles: 2
+            lifetime: 60
+            length: 120
+            interpSize: pow10In
+            interp: pow10Out
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF10
+            sizeFrom: 1
+            sizeTo: 8
+        }
+        {
+            type: ParticleEffect
+            cone: 22
+            particles: 1
+            lifetime: 90
+            length: 120
+            interpSize: pow2In
+            interp: pow10Out
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF10
+            sizeFrom: 1
+            sizeTo: 7
+        }
+    ]
+}
+}
+    blast-compound:{
+            type: BasicBulletType
+            collidesGround: false
+            lifetime: 60
+            damage: 10
+            splashDamage: 60
+            splashDamageRadius: 30
+            speed: 5
+            width:6
+            height: 6
+            bulletShrink: 0
+            impact: false
+            knockback: 4
+            frontColor: FFFFFF
+            backColor: FF7571
+            ammoMultiplier: 7
+            inaccuracy: 50
+            lifeScaleRandMin: 0.7
+            lifeScaleRandMax: 1.3
+            hitSound: explosion
+            despawnHit: true
+        despawnEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 6
+            sizeFrom: 2
+            sizeTo: 8
+            lifetime: 40
+            length: 7
+            baseLength: 10
+            interpSize: pow2In
+            interp: pow10Out
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF20
+        }
+        {
+            type: ParticleEffect
+            particles: 6
+            sizeFrom: 1
+            sizeTo: 5
+            lifetime: 15
+            length: 5
+            baseLength: 10
+            interpSize: pow2In
+            interp: pow10Out
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF20
+            
+            }
+        {
+            type: ParticleEffect
+            particles: 3
+            sizeFrom: 2
+            sizeTo: 0
+            line: false
+            lifetime: 30
+            length: 2
+            baseLength: 5
+            colorTo: FFFFFF
+            colorFrom: FF757100
+        }
+        ]
+        }
+            hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 7
+            sizeFrom: 1
+            sizeTo: 0
+            line: true
+            lifetime: 15
+            length: 50
+            baseLength: 3
+            colorTo: FFFFFF00
+            colorFrom: FF7571
+        }
+        {
+            type: WaveEffect
+            sizeFrom: 0
+            sizeTo: 30
+            lifetime: 10
+            strokeFrom: 4
+            strokeTo: 0
+            colorTo: FFFFFF00
+            colorFrom: FF7571
+            }
+        ]
+    }
+        shootEffect: none
+        smokeEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            cone: 18
+            particles: 1
+            lifetime: 70
+            length: 120
+            interpSize: pow2In
+            interp: pow10Out
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF10
+            sizeFrom: 2
+            sizeTo: 9
+        }
+        {
+            type: ParticleEffect
+            cone: 10
+            particles: 2
+            lifetime: 60
+            length: 120
+            interpSize: pow10In
+            interp: pow10Out
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF10
+            sizeFrom: 1
+            sizeTo: 8
+        }
+        {
+            type: ParticleEffect
+            cone: 22
+            particles: 1
+            lifetime: 90
+            length: 120
+            interpSize: pow2In
+            interp: pow10Out
+            colorTo: FFFFFF00
+            colorFrom: FFFFFF10
+            sizeFrom: 1
+            sizeTo: 7
+        }
+    ]
+}
+}
+}
+shoot: {
+    shots: 50
+    firstShotDelay: 30
+    }
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+    type: RegionPart
+    x: 4
+    y: 2
+    suffix: -side
+    mirror: true
+    under: true
+    outline: true
+    progress: warmup
+    moveX: 1
+    moveY: -1
+    moveRot: -28
+    moves: [
+        {
+        progress: recoil
+        rot: -4
+        }
+    ]
+    }
+]
+}
+
+requirements: [
+copper/182
+lead/95
+graphite/55
+]
+category: turret
+research: scatter
+researchCostMultiplier: 0.2

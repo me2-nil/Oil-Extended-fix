@@ -1,0 +1,475 @@
+type: ItemTurret
+name: Pioneer
+description: Early Game Machine Gun
+health: 550
+size: 2
+targetGround: true
+targetAir: true
+reload: 10
+range: 180
+rotateSpeed: 6.4
+recoil: 0.5
+recoilTime: 15
+researchCostMultiplier: 0.4
+liquidCapacity: 20
+itemCapacity: 50
+hasLiquid: true
+hasItem: true
+shootSound: shoot
+soundPitchMin: 2
+soundPitchMax: 2.2
+shake: 0.5
+consumes: {
+    coolant: {
+    amount: 0.2
+    optional: true
+    }
+}
+shootY: 6
+ammoTypes: {
+    scrap: {
+    type: BasicBulletType
+    lifetime: 13
+    inaccuracy: 20
+    damage: 6
+    speed: 10
+    width: 4
+    height: 7
+    bulletShrink: 0.5
+    frontColor: FFFFFF
+    backColor: AE9642
+    reloadMultiplier: 1.5
+    ammoMultiplier: 5
+    rangeChange: -40
+    pierceArmor: true
+    pierce: false
+    trailColor: AE9642
+    trailWidth: 1.5
+    trailLength: 3
+    despawnHit: true
+    despawnEffect: none
+    hitEffect: {
+    type: MultiEffect
+    effects: [
+        {
+        type: ParticleEffect
+        particles: 6
+        sizeFrom: 1.5
+        sizeTo: 0
+        line: true
+        lifetime: 8
+        length: 18
+        baseLength: 4
+        colorTo: FFFFFF
+        colorFrom: AE9642
+        }
+        {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 6
+        lifetime: 7
+        strokeFrom: 1
+        strokeTo: 0
+        colorTo: FFFFFF00
+        colorFrom: AE9642
+        }
+    ]
+    }
+    shootEffect: {
+        lightScl: 1
+        lightOpacity: 0.3
+        length: 0
+        offset: 270
+        cone: 0
+        particles: 1
+        lifetime: 10
+        sizeFrom: 10
+        sizeTo: 0
+        colorTo: FFFFFF
+        colorFrom: AE9642
+        region: oe-shotgunshootspike
+    }
+    smokeEffect: {
+        type: MultiEffect
+        effects: [
+        {
+        type: ParticleEffect
+        particles: 6
+        lifetime: 15
+        length: 10
+        cone: 5
+        colorTo: FFFFFF
+        colorFrom: FFC582
+        sizeFrom: 1.5
+        sizeTo: 0
+        }
+    ]
+    }
+}
+    copper: {
+    type: BasicBulletType
+    lifetime: 35
+    inaccuracy: 6
+    damage: 15
+    speed: 5
+    width: 6
+    height: 7
+    bulletShrink: 0.5
+    frontColor: FFFFFF
+    backColor: FFC582
+    pierce: false
+    trailColor: FFC582
+    trailWidth: 3
+    trailLength: 2
+    despawnHit: true
+    despawnEffect: none
+    hitEffect: {
+    type: MultiEffect
+    effects: [
+        {
+        type: ParticleEffect
+        particles: 6
+        sizeFrom: 1.5
+        sizeTo: 0
+        line: true
+        lifetime: 8
+        length: 18
+        baseLength: 4
+        colorTo: FFFFFF
+        colorFrom: FFC582
+        }
+        {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 6
+        lifetime: 7
+        strokeFrom: 1
+        strokeTo: 0
+        colorTo: FFFFFF00
+        colorFrom: FFC582
+        }
+    ]
+    }
+    shootEffect: {
+        lightScl: 1
+        lightOpacity: 0.3
+        length: 0
+        offset: 270
+        cone: 0
+        particles: 1
+        lifetime: 10
+        sizeFrom: 12
+        sizeTo: 0
+        colorTo: FFFFFF
+        colorFrom: FFC582
+        region: oe-shotgunshootspike
+    }
+    smokeEffect: {
+        type: MultiEffect
+        effects: [
+        {
+        type: ParticleEffect
+        particles: 6
+        lifetime: 15
+        length: 10
+        cone: 5
+        colorTo: FFFFFF
+        colorFrom: FFC582
+        sizeFrom: 1.5
+        sizeTo: 0
+        }
+    ]
+    }
+}
+    silicon:{
+    type: BasicBulletType
+    lifetime: 42
+    inaccuracy: 12
+    damage: 10
+    speed: 5
+    width: 6
+    height: 7
+    bulletShrink: 0.5
+    frontColor: FFFFFF
+    backColor: 6D6D6D
+    rangeChange: 40
+    ammoMultiplier: 3
+    homingPower: 0.08
+    homingRange: 200
+    homingDelay: 20
+    pierce: false
+    trailColor: 6D6D6D
+    trailWidth: 2
+    trailLength: 4
+    despawnHit: true
+    despawnEffect: none
+    hitEffect: {
+    type: MultiEffect
+    effects: [
+        {
+        type: ParticleEffect
+        particles: 6
+        sizeFrom: 1.5
+        sizeTo: 0
+        line: true
+        lifetime: 8
+        length: 18
+        baseLength: 4
+        colorTo: FFFFFF
+        colorFrom: 6D6D6D
+        }
+        {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 6
+        lifetime: 7
+        strokeFrom: 1
+        strokeTo: 0
+        colorTo: FFFFFF00
+        colorFrom: 6D6D6D
+        }
+    ]
+    }
+    shootEffect: {
+        lightScl: 1
+        lightOpacity: 0.3
+        length: 0
+        offset: 270
+        cone: 0
+        particles: 1
+        lifetime: 10
+        sizeFrom: 12
+        sizeTo: 0
+        colorTo: FFFFFF
+        colorFrom: 6D6D6D
+        region: oe-shotgunshootspike
+    }
+    smokeEffect: {
+        type: MultiEffect
+        effects: [
+        {
+        type: ParticleEffect
+        particles: 6
+        lifetime: 10
+        length: 10
+        cone: 5
+        colorTo: FFFFFF
+        colorFrom: 6D6D6D
+        sizeFrom: 1.5
+        sizeTo: 0
+        }
+    ]
+    }
+}
+    graphite: {
+    type: BasicBulletType
+    lifetime: 35
+    inaccuracy: 3
+    damage: 21
+    speed: 5
+    width: 6
+    height: 7
+    bulletShrink: 0.5
+    frontColor: FFFFFF
+    backColor: 
+    pierce: false
+    knockback: 1
+    ammoMultiplier: 3
+    reloadMultiplier: 0.6
+    trailColor: 88CEFF
+    trailWidth: 3
+    trailLength: 2
+    despawnHit: true
+    despawnEffect: none
+    hitEffect: {
+    type: MultiEffect
+    effects: [
+        {
+        type: ParticleEffect
+        particles: 6
+        sizeFrom: 1.5
+        sizeTo: 0
+        line: true
+        lifetime: 8
+        length: 18
+        baseLength: 4
+        colorTo: FFFFFF
+        colorFrom: 88CEFF
+        }
+        {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 6
+        lifetime: 7
+        strokeFrom: 1
+        strokeTo: 0
+        colorTo: FFFFFF00
+        colorFrom: 88CEFF
+        }
+    ]
+    }
+    shootEffect: {
+        lightScl: 1
+        lightOpacity: 0.3
+        length: 0
+        offset: 270
+        cone: 0
+        particles: 1
+        lifetime: 10
+        sizeFrom: 12
+        sizeTo: 0
+        colorTo: FFFFFF
+        colorFrom: 88CEFF
+        region: oe-shotgunshootspike
+    }
+    smokeEffect: {
+        type: MultiEffect
+        effects: [
+        {
+        type: ParticleEffect
+        particles: 6
+        lifetime: 15
+        length: 10
+        cone: 5
+        colorTo: FFFFFF
+        colorFrom: 88CEFF
+        sizeFrom: 1.5
+        sizeTo: 0
+        }
+    ]
+    }
+}
+    titanium: {
+    type: BasicBulletType
+    lifetime: 25
+    inaccuracy: 3
+    damage: 3
+    speed: 10
+    width: 6
+    height: 7
+    bulletShrink: 0.5
+    frontColor: FFFFFF
+    backColor: 9DBBFF
+    pierce: true
+    pierceArmor: true
+    reloadMultiplier: 1.25
+    rangeChange: 80
+    trailColor: 9DBBFF
+    trailWidth: 3
+    trailLength: 2
+    despawnHit: true
+    despawnEffect: none
+    hitEffect: {
+    type: MultiEffect
+    effects: [
+        {
+        type: ParticleEffect
+        particles: 6
+        sizeFrom: 1.5
+        sizeTo: 0
+        line: true
+        lifetime: 8
+        length: 18
+        baseLength: 4
+        colorTo: FFFFFF
+        colorFrom: 9DBBFF
+        }
+        {
+        type: WaveEffect
+        sizeFrom: 0
+        sizeTo: 6
+        lifetime: 7
+        strokeFrom: 1
+        strokeTo: 0
+        colorTo: FFFFFF00
+        colorFrom: 9DBBFF
+        }
+    ]
+    }
+    shootEffect: {
+        lightScl: 1
+        lightOpacity: 0.3
+        length: 0
+        offset: 270
+        cone: 0
+        particles: 1
+        lifetime: 10
+        sizeFrom: 12
+        sizeTo: 0
+        colorTo: FFFFFF
+        colorFrom: 9DBBFF
+        region: oe-shotgunshootspike
+    }
+    smokeEffect: {
+        type: MultiEffect
+        effects: [
+        {
+        type: ParticleEffect
+        particles: 6
+        lifetime: 15
+        length: 10
+        cone: 5
+        colorTo: FFFFFF
+        colorFrom: 9DBBFF
+        sizeFrom: 1.5
+        sizeTo: 0
+        }
+    ]
+    }
+}
+}
+drawer: {
+  type: DrawTurret
+  parts: [
+    {
+    type: RegionPart
+    
+    suffix: -barrel
+    mirror: false
+    under: true
+    outline: true
+    progress: recoil
+    moveX: 0
+    moveY: 0
+    moves: [
+    {
+    progress: recoil
+    y: -2
+    }
+    ]
+}
+{
+    type: RegionPart
+    suffix: -wing
+    mirror: true
+    under: true
+    outline: true
+    progress: recoil
+    moveX: 1
+    moveY: -2.5
+    moves: [
+    {
+    progress: recoil
+    y: -0.75
+    }
+    {
+    progress: warmup
+    x: -2
+    y: 2
+    }
+    ]
+}
+]
+}
+shoot: {
+    shots: 1
+//    firstShotDelay: 12
+//    shotDelay: 6
+    }
+
+requirements: [
+copper/112
+graphite/74
+]
+category: turret
+research: duo

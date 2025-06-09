@@ -1,0 +1,120 @@
+type: PowerTurret
+name: Spear
+description: THIS IS LANCER but can shoot faster and do less damage and stun enemies for a short time
+health: 820
+size: 2
+targetGround: true
+targetAir: false
+reload: 180
+cooldownTime: 250
+range: 144.96
+shootCone: 1
+rotateSpeed: 4
+recoil: 1.2
+researchCostMultiplier: 0.2
+moveWhileCharging: false
+liquidCapacity: 20
+coolantMultiplier: 2
+consumes: {
+    power: 6
+    coolant: {
+    amount: 0.5
+    optional: true
+    }
+}
+hasLiquid: true
+hasItem: true
+shootSound: laser
+shootY: 8
+shootType: {
+    type: LaserBulletType
+    damage: 15
+    length: 130
+    width: 8
+    sideLength: 2
+    sideWidth: 1
+    recoil: 0.1
+    inaccuracy: 20
+    colors: ["76BDFF80","FFFFFF"]
+    status: EMP
+    statusDuration: 15
+    lifetime: 15
+    collidesAir: false
+    pierce: true
+    buildingDamageMultiplier: 0.25
+    shootEffect: {
+    type:MultiEffect
+    effects: [
+    {
+    type:ParticleEffect
+    lifetime: 40
+    particles: 6
+    cone: 90
+    line: true
+    interp: pow10Out
+    length: 30
+    baseLength: 5
+    strokeFrom: 0.5
+    strokeTo: 0
+    sizeFrom: 2
+    sizeTo: 0.5
+    colorFrom: 76BDFF
+    colorTo: FFFFFF00
+    }
+    {
+    type: WaveEffect
+    sizeFrom: 0
+    sizeTo: 7
+    lifetime: 15
+    strokeFrom: 4
+    strokeTo: 0
+    colorTo: FFFFFF
+    colorFrom: 76BDFF
+    }
+    ]
+}
+    chargeEffect: {
+    type:MultiEffect
+    effects: [
+    {
+    type:ParticleEffect
+    lifetime:50
+    particles: 20
+    cone: 360
+    line: false
+    interp: reverse
+    length: 20
+    baseLength: 5
+    strokeFrom: 1
+    strokeTo: 0
+    sizeFrom: 1
+    sizeTo: 0.5
+    colorTo: 76BDFF00
+    colorFrom: FFFFFF
+    }
+    {
+    type: WaveEffect
+    sizeFrom: 10
+    sizeTo: 0
+    lifetime: 50
+    strokeFrom: 10
+    strokeTo: 0
+    colorFrom: FFFFFF00
+    colorTo: 76BDFF
+    }
+    ]
+}
+}
+shoot: {
+    shots: 7
+    shotDelay: 2.5
+    firstShotDelay: 50
+}
+requirements: [
+copper/100
+lead/120
+stranth/60
+silicon/60
+]
+category: turret
+research: lancer
