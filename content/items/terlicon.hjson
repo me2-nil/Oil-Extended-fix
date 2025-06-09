@@ -1,0 +1,10 @@
+type: resource
+name: Terlicon
+description: this is "TERLICON" not soap it was a silicon but higher tier
+color: C5A7C2
+flammability: 0
+explosiveness: 0
+radioactivity: 0.1
+charge: 0
+hardness: 1.2
+
