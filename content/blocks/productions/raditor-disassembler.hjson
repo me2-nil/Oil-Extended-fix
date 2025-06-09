@@ -1,0 +1,82 @@
+type: Separator
+name: Raditor Disassembler
+description: It's like a normal separator but it's boosted with Raditor Oil, giving it the ability to extract more and more substances easily. (It can obtain any resource depending on its importance and value.)
+health: 2400
+size: 5
+hasPower: true
+hasLiquids: true
+liquidCapacity: 50
+itemCapacity: 1000
+hasItems: true
+craftTime: 5
+
+researchCostMultiplier: 0.2
+requirements: [
+  surge-alloy/500
+  silicon/900
+  graphite/820
+  lead/1444
+  plastanium/572
+  titanium/1820
+  stranth/3120
+]
+consumes:{
+    power: 3
+    liquids: {
+        liquids: [
+        slag/0.8
+        raditor-oil/0.8
+        ]
+    }
+}
+results: [
+copper/10
+lead/10
+metaglass/7
+graphite/7
+silicon/5
+titanium/8
+plastanium/4
+stranth/9
+thorium/5
+phase-fabric/3
+surge-alloy/1
+]
+category: crafting
+research: Disassembler
+idleSound: respawning
+idleSoundVolume: 0.5
+update: true
+
+drawer: {
+    type: drawMulti
+    drawers: [
+    {
+    type: drawDefault
+    }
+    {
+    type: drawGlowRegion
+    suffix: "-glow"
+    color: FFEE7B40
+    }
+    {
+    type: drawRegion
+    suffix: "-rotate"
+    spinSprite: true
+    rotateSpeed: 3
+    }
+    {
+    type: drawRegion
+    suffix: "-rotate"
+    spinSprite: true
+    rotateSpeed: -3
+    }
+    {
+    type:drawCrucibleFlame
+    flameColor: FFEE7F
+    midColor: FFF9D3
+    }
+    ]
+}
+undateEffectChance: 0
+updateEffect: none

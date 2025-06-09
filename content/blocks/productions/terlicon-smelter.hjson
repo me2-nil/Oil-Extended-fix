@@ -1,0 +1,91 @@
+type: GenericCrafter
+name: Terlicon Smelter
+description: Produces materials with similar properties to silicon but is stronger and more flexible
+health: 920
+size: 4
+hasPower: true
+liquidCapacity: 15
+hasItems: true
+itemCapacity: 20
+craftTime: 80
+heating: 0.01
+researchCostMultiplier: 0.2
+requirements: [
+  silicon/121
+  thorium/87
+  graphite/105
+  stranth/62
+]
+consumes: {
+    power: 10
+    items: {
+        items: [
+        sand/4
+        coal/2
+        thorium/1
+        ]
+    }
+    liquids: {
+        liquids: [
+        oil/0.2
+        ]
+    }
+}
+outputItems: [
+terlicon/3
+]
+category: crafting
+research: silicon-smelter
+idleSound: respawning
+idleSoundVolume: 0.5
+update: true
+
+drawer: {
+    type: drawMulti
+    drawers: [
+    {
+    type: drawDefault
+    }
+    {
+    type:drawGlowRegion
+    suffix: "-glow"
+    color: FF50AD
+    }
+    ]
+}
+
+craftEffect: {
+    type: MultiEffect
+    effects: [
+    {
+    type: particleEffect
+    particles: 3
+    colorFrom: FF50AD
+    colorTo: FFFFFF00
+    sizeFrom: 3
+    sizeTo: 0.2
+    lifetime: 70
+    length: 15
+    }
+    {
+    type: particleEffect
+    particles: 3
+    colorFrom: FFFFFf
+    colorTo: FFFFFF00
+    sizeFrom: 3
+    sizeTo: 0.2
+    lifetime: 90
+    length: 10
+    }
+    {
+    type: particleEffect
+    particles: 3
+    colorFrom: FF50AD
+    colorTo: FF50AD00
+    sizeFrom: 3
+    sizeTo: 0.2
+    lifetime: 80
+    length: 20
+    }
+]
+}
