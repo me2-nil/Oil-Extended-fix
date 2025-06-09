@@ -110,7 +110,7 @@ ammoTypes: {
     type: BasicBulletType
     lifetime: 35
     inaccuracy: 6
-    damage: 15
+    damage: 11
     speed: 5
     width: 6
     height: 7
@@ -185,7 +185,7 @@ ammoTypes: {
     type: BasicBulletType
     lifetime: 42
     inaccuracy: 12
-    damage: 10
+    damage: 14
     speed: 5
     width: 6
     height: 7
@@ -265,7 +265,7 @@ ammoTypes: {
     type: BasicBulletType
     lifetime: 35
     inaccuracy: 3
-    damage: 21
+    damage: 19
     speed: 5
     width: 6
     height: 7
@@ -468,8 +468,9 @@ shoot: {
     }
 
 requirements: [
-copper/112
-graphite/74
+copper/110
+graphite/70
+lead/80
 ]
 category: turret
 research: duo
