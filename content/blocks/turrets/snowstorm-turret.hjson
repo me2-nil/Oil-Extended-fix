@@ -37,7 +37,7 @@ shootType: {
         pierceBuilding: true
         status: freezing
         statusDuration: 60
-        inaccuracy: 7
+        inaccuracy: 21
         despawnEffect: none
         hitEffect: {
         type: MultiEffect
@@ -72,7 +72,7 @@ shootType: {
         effects: [
         {
             type: ParticleEffect
-            cone: 4
+            cone: 22
             particles: 3
             lifetime: 30
             length: 150
@@ -83,7 +83,7 @@ shootType: {
         }
         {
             type: ParticleEffect
-            cone: 4
+            cone: 20
             particles: 2
             lifetime: 25
             length: 140
@@ -100,7 +100,7 @@ shootType: {
         effects: [
         {
             type: ParticleEffect
-            cone: 4
+            cone: 20
             particles: 3
             lifetime: 35
             length: 160
@@ -111,7 +111,7 @@ shootType: {
         }
         {
             type: ParticleEffect
-            cone: 4
+            cone: 23
             particles: 2
             lifetime: 15
             length: 150
@@ -122,7 +122,7 @@ shootType: {
         }
         {
             type: ParticleEffect
-            cone: 4
+            cone: 21
             particles: 2
             lifetime: 400
             length: 160
@@ -130,7 +130,7 @@ shootType: {
             colorFrom: FFFFFF
             colorTo: FFFFFF
             sizeFrom: 1
-            sizeTo: 0.1
+            sizeTo: 0.25
         }
     ]
 }
