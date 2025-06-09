@@ -1,0 +1,215 @@
+name: Luminus
+description:They fast flying speed and spew out flames, causing serious damage and creating chaos. They should not be kept near any power sources or flammable objects.
+flying: true
+type: flying
+lowAltitude: true
+hitSize: 30
+health: 6600
+armor: 5
+itemCapacity: 100
+speed: 1
+rotateSpeed: 0.8
+rotateShooting: true
+circleTarget: false
+faceTarget: true
+accel: 0.06
+drag: 0.08
+itemOffsetY: 5
+engineSize: 6
+engineOffset: 16
+controller: FlyingAI
+targetFlags: [ "factory","generator","core" ]
+weapons:[
+// Flamethrower
+    {
+    name:flamethrower-weapon
+    x:0
+    y:0
+    shootSound: flame
+    reload: 360
+    recoil: 2
+    recoilTime: 5
+    cooldownTime: 40
+    rotate: false
+    rotateSpeed: 0
+    mirror: false
+    alternate: false
+    top: false
+    layerOffset:-0.001
+    shootCone: 45
+    shootY: 20
+    shoot: {
+    shots: 120
+    shotDelay: 1
+    firstShotDelay: 1
+    }
+    bullet: {
+        type:BulletType
+        lifetime: 6
+        speed: 20
+        damage: 21
+        hittable: false
+        absorbable: false
+        pierce: true
+        pierceBuilding: true
+        makeFire: true
+        hitUnder: true
+        recoil: 0.05
+        inaccuracy: 7
+        despawnEffect: none
+        hitEffect: {
+        type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            particles: 6
+            sizeFrom: 3
+            sizeTo: 0
+            lifetime: 40
+            length: 7
+            baseLength: 20
+            colorTo: 4B0011
+            colorFrom: FFB266
+        }
+        {
+            type: ParticleEffect
+            particles: 6
+            sizeFrom: 2
+            sizeTo: 0
+            lifetime: 15
+            length: 5
+            baseLength: 20
+            colorTo: FFAA75
+            colorFrom: FF6B0E
+            
+            }
+        ]
+    }
+    shootEffect: {
+    type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            cone: 7
+            particles: 6
+            lifetime: 30
+            length: 130
+            colorTo: FFAA75
+            colorFrom: FFFFFF
+            sizeFrom: 2
+            sizeTo: 0.2
+        }
+        {
+            type: ParticleEffect
+            cone: 7
+            particles: 3
+            lifetime: 25
+            length: 120
+            colorTo: FFD7D3
+            colorFrom: FFCD86
+            sizeFrom: 4
+            sizeTo: 0.2
+        }
+    ]
+}
+
+    smokeEffect: {
+    type: MultiEffect
+        effects: [
+        {
+            type: ParticleEffect
+            cone: 7
+            particles: 6
+            lifetime: 35
+            length: 150
+            colorTo: FFAA75
+            colorFrom: FF6B0E
+            sizeFrom: 5
+            sizeTo: 0.2
+        }
+        {
+            type: ParticleEffect
+            cone: 7
+            particles: 3
+            lifetime: 15
+            length: 240
+            colorFrom: FFF1BD
+            colorTo: FF6B0E
+            sizeFrom: 4
+            sizeTo: 0.2
+        }
+    ]
+}
+}
+}
+// Laser Gun
+    {
+    name:luminus-laser-gun
+    x:15
+    y:-8
+    shootSound: laser
+    reload: 35
+    recoil: 0.5
+    recoilTime: 5
+    rotate: true
+    rotateSpeed: 2
+    cooldownTime: 80
+    mirror: true
+    alternate: true
+    top: true
+    layerOffset:0.001
+    inaccuracy: 0
+    shootY: 2
+    shoot: {
+    shots: 1
+    }
+    bullet: {
+        type: LaserBulletType
+        damage: 18
+        length: 90
+        width: 8
+        sideLength:5
+        sideWidth: 2
+        recoil: 0.05
+        colors: ["FFBF69","FFFFFF"]
+        lifetime: 16
+        pierce: true
+        }
+}
+// Laser Gun 2
+    {
+    name:luminus-laser-gun
+    x:8
+    y:5
+    shootSound: laser
+    reload: 35
+    recoil: 0.5
+    recoilTime: 5
+    rotate: true
+    rotateSpeed: 2
+    cooldownTime: 80
+    mirror: true
+    alternate: true
+    top: true
+    layerOffset:0.001
+    inaccuracy: 0
+    shootY: 2
+    shoot: {
+    shots: 1
+    }
+    bullet: {
+        type: LaserBulletType
+        damage: 18
+        length: 90
+        width: 8
+        sideLength:5
+        sideWidth: 2
+        recoil: 0.05
+        colors: ["FFBF69","FFFFFF"]
+        lifetime: 16
+        pierce: true
+        }
+}
+]
+research: fervo
+researchCostMultiplier: 0.3

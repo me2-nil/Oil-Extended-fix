@@ -1,0 +1,92 @@
+name: Plautus
+description: Fires a variety of missiles. Each missile has different abilities. Laser and Homing Missile
+flying: true
+type: flying
+hitSize: 28
+health: 7200
+armor: 5
+itemCapacity: 200
+speed: 0.7
+rotateSpeed: 1.05
+rotateShooting: true
+forceMultiTarget: true
+circleTarget: false
+faceTarget: true
+accel: 0.06
+drag: 0.05
+itemOffsetY: 8
+engineSize: 10
+engineOffset: 10
+controller: FlyingAI
+weapons:[
+//Laser Missile
+    {
+    name: plautus-laser
+    layerOffset: 0.5
+    x: 18
+    y: -8
+    shoot: {
+    type: AlternateShoot
+    shots: 5
+    shotDelay: 5
+    }
+    shootSound: missileSmall
+    reload: 120
+    recoil: 1
+    recoilTime: 5
+    rotate: false
+    rotateSpeed: 0
+    mirror: true
+    alternate: true
+    shootCone: 20
+    inaccuracy: 45
+    shootY: 5
+    bullet: {
+        type: BulletType
+        speed: 0
+        width: 0
+        height: 0
+        lifetime: 0
+        rangeOverride: 140
+        spawnUnit: plautus-laser-missile
+        despawnHit: true
+        despawnEffect: none
+        hitEffect: none
+        smokeEffect: none
+    }
+}
+//Laser Homing
+{
+    name: plautus-laser
+    layerOffset: 0.5
+    x: 13
+    y: 8
+    shoot: {
+    shots: 1
+    }
+    shootSound: missileSmall
+    reload: 40
+    recoil: 1
+    recoilTime: 5
+    rotate: false
+    rotateSpeed: 0
+    mirror: true
+    alternate: true
+    shootCone: 210
+    inaccuracy: 40
+    shootY: 5
+    bullet: {
+        type: BulletType
+        speed: 0
+        width: 0
+        height: 0
+        lifetime: 0
+        rangeOverride: 140
+        spawnUnit: plautus-homing-missile
+        despawnHit: true
+        despawnEffect: none
+        hitEffect: none
+        smokeEffect: none
+    }
+}
+]
