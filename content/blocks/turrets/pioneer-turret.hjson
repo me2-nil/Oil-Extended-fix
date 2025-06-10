@@ -31,7 +31,7 @@ ammoTypes: {
     type: BasicBulletType
     lifetime: 13
     inaccuracy: 20
-    damage: 6
+    damage: 9
     speed: 10
     width: 4
     height: 7
@@ -343,7 +343,7 @@ ammoTypes: {
     type: BasicBulletType
     lifetime: 25
     inaccuracy: 3
-    damage: 3
+    damage: 6
     speed: 10
     width: 6
     height: 7
