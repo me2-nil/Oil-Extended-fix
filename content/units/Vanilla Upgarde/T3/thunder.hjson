@@ -27,7 +27,7 @@ weapons:[
     x:0
     y:0
     shootSound: plasmadrop
-    reload: 240
+    reload: 160
     rotate: true
     mirror: false
     alternate: false
@@ -36,12 +36,11 @@ weapons:[
     inaccuracy: 0
     shootY: 3
     shoot: {
-    shots: 3
-    shotDelay: 30
+    shots: 1
     }
     bullet: {
         type: BombBulletType
-        damage: 30
+        damage: 40
         splashDamage: 30
         splashDamageRadius: 60
         rangeOverride: 5
@@ -108,7 +107,7 @@ weapons:[
         fragBullet: {
             type: BombBulletType
             damage: 20
-            splashDamage: 50
+            splashDamage: 20
             splashDamageRadius: 15
             speed: 5
             drag: 0.1
