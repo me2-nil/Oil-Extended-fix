@@ -50,7 +50,6 @@ weapons:[
         frontColor: FFFFFF
         backColor: FFDE9B
         lifetime: 18
-        knockback: 1.5
         pierce: false
         ammoMultiplier: 1
         despawnHit: true
