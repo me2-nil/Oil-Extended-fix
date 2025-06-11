@@ -40,9 +40,9 @@ weapons:[
     }
     bullet: {
         type: BombBulletType
-        damage: 60
-        splashDamage: 60
-        splashDamageRadius: 60
+        damage: 50
+        splashDamage: 50
+        splashDamageRadius: 70
         rangeOverride: 5
         speed: 0
         width: 10
@@ -106,9 +106,9 @@ weapons:[
         fragRandomSpread: 0
         fragBullet: {
             type: BombBulletType
-            damage: 10
-            splashDamage: 10
-            splashDamageRadius: 30
+            damage: 40
+            splashDamage: 40
+            splashDamageRadius: 40
             speed: 5
             drag: 0.1
             width: 10
@@ -157,7 +157,7 @@ weapons:[
             fragRandomSpread: 0
             fragBullet: {
             type: LaserBulletType
-            damage: 10
+            damage: 30
             length: 60
             width: 4
             sideLength: 10
