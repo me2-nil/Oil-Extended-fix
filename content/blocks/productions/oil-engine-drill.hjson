@@ -34,12 +34,6 @@ requirements: [
 category: production
 research: {
     parent: pneumatic-drill
-    objectives: [
-        {
-            type: SectorComplete
-            preset:rustyStation
-        }
-    ]
 }
 researchCostMultiplier: 0.4
 idleSound: drill
