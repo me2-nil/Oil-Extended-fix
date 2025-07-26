@@ -28,12 +28,6 @@ titanium/80
 category: production
 research: {
     parent: copper-oil-drill
-    objectives: [
-        {
-            type: SectorComplete
-            preset: greatWall
-        }
-    ]
 }
 ambientSound: drill
 ambientSoundVolume: 1.55
