@@ -9,14 +9,14 @@ liquidCapacity: 10
 hasItems: true
 attribute: water
 result: water
-pumpAmount: 0.03
+pumpAmount: 0.02
 rotateSpeed: 1.2
 itemUseTime: 60
 researchCostMultiplier: 0.4
 requirements: [
-  copper/37
-  lead/25
-  graphite/12
+  copper/59
+  lead/32
+  graphite/70
 ]
 category: production
 research: pneumatic-drill

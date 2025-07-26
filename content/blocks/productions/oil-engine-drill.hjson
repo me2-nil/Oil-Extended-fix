@@ -18,7 +18,7 @@ liquidBoostIntensity: 1.9
 consumes: {
     liquid:{
     liquid: oil
-    amount: 0.0416666666667
+    amount: 0.12
     booster: false
     optional: true
     }
@@ -32,7 +32,15 @@ requirements: [
   stranth/10
 ]
 category: production
-research: pneumatic-drill
+research: {
+    parent: pneumatic-drill
+    objectives: [
+        {
+            type: SectorComplete
+            preset:rustyStation
+        }
+    ]
+}
 researchCostMultiplier: 0.4
 idleSound: drill
 idleSoundVolume: 0.003

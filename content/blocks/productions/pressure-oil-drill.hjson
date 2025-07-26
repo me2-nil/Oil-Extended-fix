@@ -1,36 +1,37 @@
 type: fracker
-name: Copper Oil Drill
-description: Very Slowly Pumping Oil But Useful For Early Game And Can Place On Any Terrian
-health: 240
-size: 2
+name: Pressure Oil Drill
+description: Pumping Oil For Early - Mid Game And Can Place On Any Terrian
+health: 720
+size: 3
 hasPower: false
 hasLiquids: true
 liquidCapacity: 15
 hasItems: true
 attribute: oil
 result: oil
-pumpAmount: 0.0334
-itemUseTime: 180
+pumpAmount: 0.1166666669
+itemUseTime: 90
 researchCostMultiplier: 0.2
 consumes: {
     liquids: {
         liquids: [
-        water/0.1
+        water/0.166666667
         ]
     }
 }
 requirements: [
-  copper/80
-  graphite/50
-  lead/50
+stranth/150
+silicon/65
+lead/100
+titanium/80
 ]
 category: production
 research: {
-    parent: mechanical-drill
+    parent: copper-oil-drill
     objectives: [
         {
             type: SectorComplete
-            preset: oldOilRig
+            preset: greatWall
         }
     ]
 }

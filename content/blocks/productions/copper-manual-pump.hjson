@@ -11,7 +11,7 @@ requirements: [
   copper/60
   lead/35
 ]
-pumpAmount: 0.06666666668
+pumpAmount: 0.08
 liquidCapacity: 20
 category: liquid
 research: copper-pipe

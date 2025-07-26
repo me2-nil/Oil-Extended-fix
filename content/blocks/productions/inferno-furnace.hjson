@@ -34,7 +34,15 @@ outputItems: [
 stranth/10
 ]
 category: crafting
-research: graphite-press
+research: {
+    parent: graphite-press
+    objectives: [
+        {
+            type: SectorComplete
+            preset: rustyStation
+        }
+    ]
+}
 idleSound: respawning
 idleSoundVolume: 0.5
 update: true
