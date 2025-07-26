@@ -20,7 +20,7 @@ consumes: {
     power: 1.5
     liquid:{
     liquid: diesel
-    amount: 0.2
+    amount: 0.1
     booster: true
     optional: true
     }
