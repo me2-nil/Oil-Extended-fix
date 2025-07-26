@@ -27,12 +27,6 @@ requirements: [
 category: production
 research: {
     parent: mechanical-drill
-    objectives: [
-        {
-            type: SectorComplete
-            preset: oldOilRig
-        }
-    ]
 }
 ambientSound: drill
 ambientSoundVolume: 1.55
