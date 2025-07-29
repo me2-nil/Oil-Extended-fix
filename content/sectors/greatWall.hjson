@@ -1,0 +1,17 @@
+captureWave: 32
+difficulty: 5
+sector: 124
+planet: serpulo
+research: {
+    parent: oldOilRig
+    objectives: [
+        {
+            type: SectorComplete
+            preset: oldOilRig
+        }
+        {
+            type: SectorComplete
+            preset: ruinousShores
+        }
+    ]
+}

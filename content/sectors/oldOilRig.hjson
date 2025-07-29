@@ -1,0 +1,14 @@
+captureWave: 16
+difficulty: 2
+sector: 170
+planet: serpulo
+ research: {
+    parent: groundZero
+    objectives: [
+    graphite-press,
+        {
+            type: SectorComplete
+            preset: groundZero
+        }
+    ]
+}

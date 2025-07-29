@@ -1,0 +1,15 @@
+captureWave: 51
+difficulty: 2
+sector: 181
+planet: serpulo
+research: {
+    parent: oldOilRig
+    objectives: [
+    ground-factory,
+    dagger,
+        {
+            type: SectorComplete
+            preset: craters
+        }
+    ]
+}
