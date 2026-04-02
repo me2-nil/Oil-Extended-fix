@@ -9,7 +9,7 @@ research: {
     dagger,
         {
             type: SectorComplete
-            preset: crateredBattlefield
+            preset: crateredBattleground
         }
     ]
 }
